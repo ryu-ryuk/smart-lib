@@ -42,8 +42,8 @@ export default function LandingPage() {
       <nav className="fixed top-0 left-0 right-0 z-50">
         <div
           className={`mx-auto px-6 flex items-center justify-between transition-all duration-300 ${scrolled
-              ? "max-w-3xl mt-3 py-2 nav-pill"
-              : "max-w-7xl py-4 glass-effect border-b border-white/10"
+            ? "max-w-3xl mt-3 py-2 nav-pill"
+            : "max-w-7xl py-4 glass-effect border-b border-white/10"
             }`}
         >
           <div className="flex items-center gap-3 animate-fade-in">
@@ -64,7 +64,7 @@ export default function LandingPage() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center">
           <div className="inline-block mb-6 px-4 py-2 glass-effect rounded-full animate-slide-up">
             <div className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-accent animate-glow-pulse" />
@@ -73,31 +73,29 @@ export default function LandingPage() {
           </div>
 
           <h2
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-balance animate-slide-up"
+            className="text-5xl md:text-7xl font-extrabold leading-tight text-balance animate-slide-up bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent"
+            style={{ animationDelay: "0.05s" }}
+          >
+            Smart Library Management
+          </h2>
+          <p
+            className="mt-3 md:mt-4 text-base md:text-lg text-muted-foreground text-balance animate-slide-up"
             style={{ animationDelay: "0.1s" }}
           >
-            Intelligent Library Attendance and Book Management
-          </h2>
-
-          <p
-            className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-balance animate-slide-up"
-            style={{ animationDelay: "0.2s" }}
-          >
-            Streamline your library operations with real-time attendance tracking, automated book management, and
-            comprehensive student records. Built for modern educational institutions.
+            Track attendance, manage books, and view records — in real time.
           </p>
 
           <div
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-slide-up"
-            style={{ animationDelay: "0.3s" }}
+            className="flex flex-col sm:flex-row gap-6 justify-center mt-8 md:mt-10 mb-16 animate-slide-up"
+            style={{ animationDelay: "0.15s" }}
           >
             <Link
               href="/login"
-              className="px-8 py-3 bg-gradient-to-r from-accent to-accent/80 text-accent-foreground rounded-full font-medium hover:shadow-lg hover:shadow-accent/20 transition-all duration-300 flex items-center justify-center gap-2 group"
+              className="px-8 md:px-10 py-3.5 bg-white/3 backdrop-blur-sm border border-white/10 text-foreground rounded-lg font-semibold hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-2 group"
             >
               Get Started <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <button className="px-8 py-3 glass-effect rounded-full font-medium hover:bg-white/10 transition-all duration-300">
+            <button className="px-8 md:px-10 py-3.5 bg-white/3 backdrop-blur-sm border border-white/10 text-foreground rounded-lg font-medium hover:bg-white/5 transition-all duration-300">
               Learn More
             </button>
           </div>
@@ -128,7 +126,7 @@ export default function LandingPage() {
               return (
                 <div
                   key={idx}
-                  className="glass-effect rounded-2xl p-8 hover:bg-white/8 transition-all duration-300 group cursor-pointer animate-slide-up card-float"
+                  className="bg-white/3 backdrop-blur-sm border border-white/10 rounded-lg p-8 hover:bg-white/5 transition-all duration-300 group cursor-pointer animate-slide-up card-float"
                   style={{ animationDelay: feature.delay }}
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-accent/30 to-accent/10 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:from-accent/50 group-hover:to-accent/20 transition-all duration-300">
