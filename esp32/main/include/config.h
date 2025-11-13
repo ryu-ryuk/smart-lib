@@ -12,7 +12,7 @@
 // Admin API is routed behind the same Cloudflare domain
 #define ADMIN_API_URL "https://esp.alokranjan.me/admin"
 
-#define DEVICE_TOKEN "REPLACE_WITH_DEVICE_TOKEN"  // Plain token that matches DB hash
+#define DEVICE_TOKEN "CHANGE_ME_DEVICE_TOKEN"  // Plain token that matches DB hash
 #define DEVICE_ID "esp32-device-001"
 
 // MFRC522 RFID Reader Configuration
