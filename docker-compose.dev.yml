@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: attendance-postgres-dev
+    environment:
+      POSTGRES_DB: attendance
+      POSTGRES_USER: attendance_user
+      POSTGRES_PASSWORD: dev_password_123
+    volumes:
+      - postgres_data_dev:/var/lib/postgresql/data
+      - ./migrations/attendance.sql:/docker-entrypoint-initdb.d/01-init.sql
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U attendance_user -d attendance"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data_dev:
+
+

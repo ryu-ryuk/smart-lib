@@ -1,0 +1,272 @@
+[
+  {
+    "isbn": "978-0-13-110362-7",
+    "title": "The C Programming Language",
+    "author": "Brian W. Kernighan",
+    "category": "Data Science",
+    "status": "borrowed",
+    "borrowedBy": "Mia Wright",
+    "dueDate": "2025-11-10"
+  },
+  {
+    "isbn": "978-0-201-63361-0",
+    "title": "Design Patterns",
+    "author": "Gang of Four",
+    "category": "Data Science",
+    "status": "available",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-0-596-00712-6",
+    "title": "Learning Python",
+    "author": "Mark Lutz",
+    "category": "Software Design",
+    "status": "available",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-1-491-95023-9",
+    "title": "Eloquent JavaScript",
+    "author": "Marijn Haverbeke",
+    "category": "Data Science",
+    "status": "borrowed",
+    "borrowedBy": "Rachel Johnson",
+    "dueDate": "2025-11-11"
+  },
+  {
+    "isbn": "978-0-13-235088-4",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "category": "Web Development",
+    "status": "available",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-0-262-03384-8",
+    "title": "Introduction to Algorithms",
+    "author": "Cormen, Leiserson, Rivest, Stein",
+    "category": "Data Science",
+    "status": "borrowed",
+    "borrowedBy": "Olivia Davis",
+    "dueDate": "2025-11-25"
+  },
+  {
+    "isbn": "978-0-596-52068-7",
+    "title": "RESTful Web Services",
+    "author": "Leonard Richardson",
+    "category": "Data Science",
+    "status": "borrowed",
+    "borrowedBy": "Frank Johnson",
+    "dueDate": "2025-11-13"
+  },
+  {
+    "isbn": "978-1-449-35818-8",
+    "title": "You Don't Know JS",
+    "author": "Kyle Simpson",
+    "category": "Physics",
+    "status": "available",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-0-13-468599-1",
+    "title": "Refactoring",
+    "author": "Martin Fowler",
+    "category": "Algorithms",
+    "status": "borrowed",
+    "borrowedBy": "Iris Hall",
+    "dueDate": "2025-11-16"
+  },
+  {
+    "isbn": "978-1-491-95019-2",
+    "title": "Practical Machine Learning",
+    "author": "Aurélien Géron",
+    "category": "Machine Learning",
+    "status": "available",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-0-13-595705-9",
+    "title": "The Pragmatic Programmer",
+    "author": "David Thomas, Andrew Hunt",
+    "category": "Web Development",
+    "status": "available",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-1-491-95017-8",
+    "title": "Deep Learning",
+    "author": "Ian Goodfellow",
+    "category": "Programming",
+    "status": "borrowed",
+    "borrowedBy": "Olivia Martinez",
+    "dueDate": "2025-12-06"
+  },
+  {
+    "isbn": "978-0-596-00712-7",
+    "title": "Web Development with Node.js",
+    "author": "Ethan Brown",
+    "category": "Machine Learning",
+    "status": "available",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-1-491-95020-8",
+    "title": "Data Science Handbook",
+    "author": "Jake VanderPlas",
+    "category": "Web Development",
+    "status": "reserved",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-0-13-110363-4",
+    "title": "Advanced C Programming",
+    "author": "Richard Reese",
+    "category": "Machine Learning",
+    "status": "reserved",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-0-13-110362-7-15",
+    "title": "The C Programming Language (Copy 2)",
+    "author": "Brian W. Kernighan",
+    "category": "Web Development",
+    "status": "available",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-0-201-63361-0-16",
+    "title": "Design Patterns (Copy 2)",
+    "author": "Gang of Four",
+    "category": "Algorithms",
+    "status": "available",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-0-596-00712-6-17",
+    "title": "Learning Python (Copy 2)",
+    "author": "Mark Lutz",
+    "category": "Software Design",
+    "status": "borrowed",
+    "borrowedBy": "Mia Wright",
+    "dueDate": "2025-11-13"
+  },
+  {
+    "isbn": "978-1-491-95023-9-18",
+    "title": "Eloquent JavaScript (Copy 2)",
+    "author": "Marijn Haverbeke",
+    "category": "Mathematics",
+    "status": "available",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-0-13-235088-4-19",
+    "title": "Clean Code (Copy 2)",
+    "author": "Robert C. Martin",
+    "category": "Data Science",
+    "status": "borrowed",
+    "borrowedBy": "David Hall",
+    "dueDate": "2025-12-04"
+  },
+  {
+    "isbn": "978-0-262-03384-8-20",
+    "title": "Introduction to Algorithms (Copy 2)",
+    "author": "Cormen, Leiserson, Rivest, Stein",
+    "category": "Mathematics",
+    "status": "borrowed",
+    "borrowedBy": "Frank Johnson",
+    "dueDate": "2025-11-25"
+  },
+  {
+    "isbn": "978-0-596-52068-7-21",
+    "title": "RESTful Web Services (Copy 2)",
+    "author": "Leonard Richardson",
+    "category": "Software Design",
+    "status": "available",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-1-449-35818-8-22",
+    "title": "You Don't Know JS (Copy 2)",
+    "author": "Kyle Simpson",
+    "category": "Data Science",
+    "status": "available",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-0-13-468599-1-23",
+    "title": "Refactoring (Copy 2)",
+    "author": "Martin Fowler",
+    "category": "Software Design",
+    "status": "reserved",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-1-491-95019-2-24",
+    "title": "Practical Machine Learning (Copy 2)",
+    "author": "Aurélien Géron",
+    "category": "Algorithms",
+    "status": "available",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-0-13-595705-9-25",
+    "title": "The Pragmatic Programmer (Copy 2)",
+    "author": "David Thomas, Andrew Hunt",
+    "category": "Physics",
+    "status": "reserved",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-1-491-95017-8-26",
+    "title": "Deep Learning (Copy 2)",
+    "author": "Ian Goodfellow",
+    "category": "Data Science",
+    "status": "available",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-0-596-00712-7-27",
+    "title": "Web Development with Node.js (Copy 2)",
+    "author": "Ethan Brown",
+    "category": "Algorithms",
+    "status": "reserved",
+    "borrowedBy": null,
+    "dueDate": null
+  },
+  {
+    "isbn": "978-1-491-95020-8-28",
+    "title": "Data Science Handbook (Copy 2)",
+    "author": "Jake VanderPlas",
+    "category": "Software Design",
+    "status": "borrowed",
+    "borrowedBy": "Iris White",
+    "dueDate": "2025-12-02"
+  },
+  {
+    "isbn": "978-0-13-110363-4-29",
+    "title": "Advanced C Programming (Copy 2)",
+    "author": "Richard Reese",
+    "category": "Programming",
+    "status": "reserved",
+    "borrowedBy": null,
+    "dueDate": null
+  }
+]

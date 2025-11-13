@@ -1,28 +1,80 @@
 "use client"
 
-import { useState, useMemo } from "react"
-import { Search, Filter, MoreHorizontal } from "lucide-react"
-import { mockStudents } from "@/lib/mock-data"
+import { useState, useMemo, useEffect } from "react"
+import { Search, Filter, MoreHorizontal, CreditCard } from "lucide-react"
+import { fetchStudents, registerRFID, type Student } from "@/lib/api"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 
 export default function StudentRecords() {
+  const [students, setStudents] = useState<Student[]>([])
   const [searchTerm, setSearchTerm] = useState("")
-  const [filterStatus, setFilterStatus] = useState("all")
   const [filterDepartment, setFilterDepartment] = useState("all")
   const [sortBy, setSortBy] = useState("name")
+  const [loading, setLoading] = useState(true)
+  const [registerDialogOpen, setRegisterDialogOpen] = useState(false)
+  const [selectedStudent, setSelectedStudent] = useState<Student | null>(null)
+  const [rfidUid, setRfidUid] = useState("")
+  const [registering, setRegistering] = useState(false)
+  const [registerError, setRegisterError] = useState<string | null>(null)
 
-  const departments = ["all", ...new Set(mockStudents.map((s) => s.department))]
+  useEffect(() => {
+    loadStudents()
+  }, [])
+
+  const loadStudents = async () => {
+    try {
+      setLoading(true)
+      const data = await fetchStudents()
+      setStudents(data)
+    } catch (error) {
+      console.error('Failed to load students:', error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleRegisterRFID = (student: Student) => {
+    setSelectedStudent(student)
+    setRfidUid("")
+    setRegisterError(null)
+    setRegisterDialogOpen(true)
+  }
+
+  const handleSubmitRFID = async () => {
+    if (!selectedStudent || !rfidUid.trim()) {
+      setRegisterError("Please enter RFID UID")
+      return
+    }
+
+    setRegistering(true)
+    setRegisterError(null)
+
+    try {
+      await registerRFID(selectedStudent.admission_no, rfidUid.trim())
+      await loadStudents() // Refresh to show updated RFID
+      setRegisterDialogOpen(false)
+      setRfidUid("")
+      setSelectedStudent(null)
+    } catch (error: any) {
+      setRegisterError(error.message || "Failed to register RFID")
+    } finally {
+      setRegistering(false)
+    }
+  }
+
+  const departments = ["all", ...new Set(students.map((s) => s.branch).filter(Boolean) as string[])]
 
   const filteredStudents = useMemo(() => {
-    const result = mockStudents.filter((student) => {
+    const result = students.filter((student) => {
       const matchesSearch =
         student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        student.studentId.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        student.email.toLowerCase().includes(searchTerm.toLowerCase())
+        student.admission_no.toLowerCase().includes(searchTerm.toLowerCase())
 
-      const matchesStatus = filterStatus === "all" || student.status === filterStatus
-      const matchesDepartment = filterDepartment === "all" || student.department === filterDepartment
+      const matchesDepartment = filterDepartment === "all" || student.branch === filterDepartment
 
-      return matchesSearch && matchesStatus && matchesDepartment
+      return matchesSearch && matchesDepartment
     })
 
     result.sort((a, b) => {
@@ -30,16 +82,25 @@ export default function StudentRecords() {
         case "name":
           return a.name.localeCompare(b.name)
         case "id":
-          return a.studentId.localeCompare(b.studentId)
-        case "books":
-          return b.booksBorrowed - a.booksBorrowed
+          return a.admission_no.localeCompare(b.admission_no)
         default:
           return 0
       }
     })
 
     return result
-  }, [searchTerm, filterStatus, filterDepartment, sortBy])
+  }, [students, searchTerm, filterDepartment, sortBy])
+
+  if (loading) {
+    return (
+      <div className="p-8 flex items-center justify-center h-64">
+        <div className="text-center">
+          <div className="w-12 h-12 border-4 border-accent/20 border-t-accent rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-muted-foreground">Loading students...</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="p-8 space-y-6">
@@ -51,7 +112,7 @@ export default function StudentRecords() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               <input
                 type="text"
-                placeholder="Search by name, ID, or email..."
+                placeholder="Search by name or admission number..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-2 bg-card border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
@@ -62,38 +123,27 @@ export default function StudentRecords() {
           <div className="flex items-center gap-2">
             <Filter className="w-5 h-5 text-muted-foreground" />
             <select
-              value={filterStatus}
-              onChange={(e) => setFilterStatus(e.target.value)}
+              value={filterDepartment}
+              onChange={(e) => setFilterDepartment(e.target.value)}
               className="px-4 py-2 bg-card border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
             >
-              <option value="all">All Status</option>
-              <option value="active">Active</option>
-              <option value="inactive">Inactive</option>
+              <option value="all">All Departments</option>
+              {departments.slice(1).map((dept) => (
+                <option key={dept} value={dept}>
+                  {dept}
+                </option>
+              ))}
+            </select>
+
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="px-4 py-2 bg-card border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+              <option value="name">Sort by Name</option>
+              <option value="id">Sort by ID</option>
             </select>
           </div>
-
-          <select
-            value={filterDepartment}
-            onChange={(e) => setFilterDepartment(e.target.value)}
-            className="px-4 py-2 bg-card border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-          >
-            <option value="all">All Departments</option>
-            {departments.slice(1).map((dept) => (
-              <option key={dept} value={dept}>
-                {dept}
-              </option>
-            ))}
-          </select>
-
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            className="px-4 py-2 bg-card border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-          >
-            <option value="name">Sort by Name</option>
-            <option value="id">Sort by ID</option>
-            <option value="books">Sort by Books Borrowed</option>
-          </select>
         </div>
       </div>
 
@@ -103,45 +153,96 @@ export default function StudentRecords() {
           <table className="data-table">
             <thead>
               <tr>
-                <th>Student ID</th>
+                <th>Admission No</th>
                 <th>Name</th>
-                <th>Email</th>
-                <th>Department</th>
-                <th>Status</th>
-                <th>Books Borrowed</th>
+                <th>Branch</th>
+                <th>Year</th>
+                <th>RFID UID</th>
                 <th className="text-center">Actions</th>
               </tr>
             </thead>
             <tbody>
-              {filteredStudents.map((student, idx) => (
-                <tr key={idx}>
-                  <td className="font-mono text-sm">{student.studentId}</td>
-                  <td className="font-medium">{student.name}</td>
-                  <td className="text-muted-foreground">{student.email}</td>
-                  <td>{student.department}</td>
-                  <td>
-                    <span
-                      className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${student.status === "active" ? "bg-green-500/20 text-green-400" : "bg-gray-500/20 text-gray-400"
-                        }`}
-                    >
-                      {student.status}
-                    </span>
-                  </td>
-                  <td className="font-semibold">{student.booksBorrowed}</td>
-                  <td className="text-center">
-                    <button className="inline-flex items-center justify-center w-8 h-8 rounded hover:bg-card transition-colors">
-                      <MoreHorizontal className="w-4 h-4 text-muted-foreground" />
-                    </button>
+              {filteredStudents.length === 0 ? (
+                <tr>
+                  <td colSpan={5} className="text-center text-muted-foreground py-8">
+                    No students found
                   </td>
                 </tr>
-              ))}
+              ) : (
+                filteredStudents.map((student) => (
+                  <tr key={student.admission_no}>
+                    <td className="font-mono text-sm">{student.admission_no}</td>
+                    <td className="font-medium">{student.name}</td>
+                    <td>{student.branch || "-"}</td>
+                    <td>{student.year || "-"}</td>
+                    <td className="font-mono text-sm text-foreground">{student.rfid_uid || <span className="text-muted-foreground">Not linked</span>}</td>
+                    <td className="text-center">
+                      <button
+                        onClick={() => handleRegisterRFID(student)}
+                        className="inline-flex items-center justify-center w-8 h-8 rounded hover:bg-card transition-colors"
+                        title="Register/Update RFID Card"
+                      >
+                        <CreditCard className="w-4 h-4 text-muted-foreground hover:text-accent" />
+                      </button>
+                    </td>
+                  </tr>
+                ))
+              )}
             </tbody>
           </table>
         </div>
         <div className="mt-4 text-sm text-muted-foreground">
-          Showing {filteredStudents.length} of {mockStudents.length} students
+          Showing {filteredStudents.length} of {students.length} students
         </div>
       </div>
+
+      {/* Register RFID Dialog */}
+      <Dialog open={registerDialogOpen} onOpenChange={setRegisterDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Register RFID Card</DialogTitle>
+            <DialogDescription>
+              Register or update RFID card for {selectedStudent?.name} ({selectedStudent?.admission_no})
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4 py-4">
+            <div>
+              <label className="text-sm font-medium mb-2 block">RFID UID</label>
+              <Input
+                type="text"
+                placeholder="Enter RFID UID (e.g., A1B2C3D4)"
+                value={rfidUid}
+                onChange={(e) => setRfidUid(e.target.value.toUpperCase())}
+                className="font-mono"
+                autoFocus
+              />
+              <p className="text-xs text-muted-foreground mt-1">
+                Scan or type the RFID card UID (hex format)
+              </p>
+            </div>
+            {registerError && (
+              <div className="p-3 bg-red-500/20 border border-red-500/50 rounded text-sm text-red-400">
+                {registerError}
+              </div>
+            )}
+            <div className="flex gap-2 justify-end">
+              <Button
+                variant="outline"
+                onClick={() => setRegisterDialogOpen(false)}
+                disabled={registering}
+              >
+                Cancel
+              </Button>
+              <Button
+                onClick={handleSubmitRFID}
+                disabled={registering || !rfidUid.trim()}
+              >
+                {registering ? "Registering..." : "Register RFID"}
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   )
 }

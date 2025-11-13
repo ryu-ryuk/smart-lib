@@ -25,3 +25,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# python
+admin/venv/
+*.pyc
+__pycache__/
+
+# go
+gateway/bin/
+
+# esp-idf build outputs
+esp32/build/
+
+# local data
+*.db
+*.sqlite
+*.log

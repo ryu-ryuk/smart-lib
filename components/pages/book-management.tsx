@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react"
 import { Search, Filter, MoreHorizontal } from "lucide-react"
-import { mockBooks } from "@/lib/mock-data"
+import { books as allBooks } from "@/lib/data-loader"
 
 export default function BookManagement() {
   const [searchTerm, setSearchTerm] = useState("")
@@ -10,10 +10,11 @@ export default function BookManagement() {
   const [filterCategory, setFilterCategory] = useState("all")
   const [sortBy, setSortBy] = useState("title")
 
-  const categories = ["all", ...new Set(mockBooks.map((b) => b.category))]
+  const books = allBooks;
+  const categories = ["all", ...new Set(books.map((b) => b.category))]
 
   const filteredBooks = useMemo(() => {
-    const result = mockBooks.filter((book) => {
+    const result = books.filter((book) => {
       const matchesSearch =
         book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         book.isbn.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -43,9 +44,9 @@ export default function BookManagement() {
   }, [searchTerm, filterStatus, filterCategory, sortBy])
 
   const stats = {
-    total: mockBooks.length,
-    available: mockBooks.filter((b) => b.status === "available").length,
-    borrowed: mockBooks.filter((b) => b.status === "borrowed").length,
+    total: books.length,
+    available: books.filter((b) => b.status === "available").length,
+    borrowed: books.filter((b) => b.status === "borrowed").length,
   }
 
   return (
@@ -161,8 +162,8 @@ export default function BookManagement() {
                   <td>
                     <span
                       className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${book.status === "available"
-                          ? "bg-green-500/20 text-green-400"
-                          : "bg-orange-500/20 text-orange-400"
+                        ? "bg-green-500/20 text-green-400"
+                        : "bg-orange-500/20 text-orange-400"
                         }`}
                     >
                       {book.status}
@@ -181,7 +182,7 @@ export default function BookManagement() {
           </table>
         </div>
         <div className="mt-4 text-sm text-muted-foreground">
-          Showing {filteredBooks.length} of {mockBooks.length} books
+          Showing {filteredBooks.length} of {books.length} books
         </div>
       </div>
     </div>

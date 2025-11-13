@@ -50,13 +50,18 @@ export default function Sidebar({ currentPage, onPageChange }: SidebarProps) {
 
       {/* Footer */}
       <div className="p-4 border-t border-white/10 space-y-4">
-        <Link
-          href="/landing"
+        <button
+          onClick={() => {
+            if (typeof window !== 'undefined') {
+              localStorage.removeItem('isAuthenticated')
+              window.location.href = '/login'
+            }
+          }}
           className="flex items-center gap-3 px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-white/5 text-muted-foreground hover:text-foreground w-full"
         >
           <LogOut className="w-5 h-5" />
           <span>Exit System</span>
-        </Link>
+        </button>
         <p className="text-xs text-muted-foreground text-center">v1.0.0</p>
       </div>
     </aside>

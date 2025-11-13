@@ -6,7 +6,11 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "eslint .",
-    "start": "next start"
+    "start": "next start",
+    "stack:start": "./scripts/dev.sh up",
+    "stack:stop": "./scripts/dev.sh down",
+    "stack:restart": "./scripts/dev.sh restart",
+    "register-rfid": "node scripts/register-rfid.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -47,6 +51,7 @@
     "input-otp": "latest",
     "lucide-react": "^0.454.0",
     "next": "16.0.0",
+    "next-auth": "^5.0.0-beta.30",
     "next-themes": "^0.4.6",
     "react": "19.2.0",
     "react-day-picker": "latest",

@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
 import { useState } from "react"
+import { useSession } from "next-auth/react"
 import Sidebar from "@/components/sidebar"
 import Header from "@/components/header"
 import Dashboard from "@/components/pages/dashboard"
@@ -11,21 +12,26 @@ import BookManagement from "@/components/pages/book-management"
 
 export default function DashboardApp() {
     const [currentPage, setCurrentPage] = useState("dashboard")
-    const [isAuthenticated, setIsAuthenticated] = useState(false)
-    const [isLoading, setIsLoading] = useState(true)
+    const { data: session, status } = useSession()
     const router = useRouter()
 
     useEffect(() => {
-        const isAuth = localStorage.getItem("isAuthenticated")
-        if (!isAuth) {
+        if (status === "unauthenticated") {
             router.push("/login")
-        } else {
-            setIsAuthenticated(true)
         }
-        setIsLoading(false)
-    }, [router])
+    }, [status, router])
 
-    if (isLoading) {
+    useEffect(() => {
+        const handlePageChange = (e: CustomEvent) => {
+            setCurrentPage(e.detail)
+        }
+        window.addEventListener('pageChange', handlePageChange as EventListener)
+        return () => {
+            window.removeEventListener('pageChange', handlePageChange as EventListener)
+        }
+    }, [])
+
+    if (status === "loading") {
         return (
             <div className="flex h-screen items-center justify-center bg-background">
                 <div className="text-center">
@@ -36,7 +42,7 @@ export default function DashboardApp() {
         )
     }
 
-    if (!isAuthenticated) {
+    if (!session) {
         return null
     }
 

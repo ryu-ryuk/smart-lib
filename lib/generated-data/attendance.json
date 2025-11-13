@@ -1,0 +1,4594 @@
+[
+  {
+    "id": 1,
+    "admission_no": "24gce23039",
+    "event_type": "entry",
+    "ts": "2025-11-06T13:03:11.315Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah White"
+  },
+  {
+    "id": 2,
+    "admission_no": "24gce22015",
+    "event_type": "entry",
+    "ts": "2025-11-06T12:51:47.315Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Johnson"
+  },
+  {
+    "id": 6,
+    "admission_no": "24gce24037",
+    "event_type": "entry",
+    "ts": "2025-11-06T12:11:09.315Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Hill"
+  },
+  {
+    "id": 21,
+    "admission_no": "24gce23025",
+    "event_type": "entry",
+    "ts": "2025-11-06T12:10:38.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Thompson"
+  },
+  {
+    "id": 3,
+    "admission_no": "24gce23032",
+    "event_type": "entry",
+    "ts": "2025-11-06T11:14:39.315Z",
+    "device_id": "esp32-device-001",
+    "name": "Bob Brown"
+  },
+  {
+    "id": 15,
+    "admission_no": "24gce25006",
+    "event_type": "exit",
+    "ts": "2025-11-06T10:58:53.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul King"
+  },
+  {
+    "id": 12,
+    "admission_no": "24gce22035",
+    "event_type": "entry",
+    "ts": "2025-11-06T10:55:48.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank White"
+  },
+  {
+    "id": 18,
+    "admission_no": "24gce24001",
+    "event_type": "entry",
+    "ts": "2025-11-06T10:45:35.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Rodriguez"
+  },
+  {
+    "id": 8,
+    "admission_no": "24gce24031",
+    "event_type": "entry",
+    "ts": "2025-11-06T10:29:13.315Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Wright"
+  },
+  {
+    "id": 19,
+    "admission_no": "24gce23019",
+    "event_type": "entry",
+    "ts": "2025-11-06T09:43:10.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Henry Allen"
+  },
+  {
+    "id": 7,
+    "admission_no": "24gce25006",
+    "event_type": "entry",
+    "ts": "2025-11-06T09:15:40.315Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul King"
+  },
+  {
+    "id": 24,
+    "admission_no": "24gce24044",
+    "event_type": "entry",
+    "ts": "2025-11-06T09:00:34.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 10,
+    "admission_no": "24gce24037",
+    "event_type": "exit",
+    "ts": "2025-11-06T08:14:03.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Hill"
+  },
+  {
+    "id": 4,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-11-06T08:07:10.315Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 13,
+    "admission_no": "24gce24027",
+    "event_type": "exit",
+    "ts": "2025-11-06T07:37:14.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 14,
+    "admission_no": "24gce23028",
+    "event_type": "entry",
+    "ts": "2025-11-06T07:31:40.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Thompson"
+  },
+  {
+    "id": 11,
+    "admission_no": "24gce22050",
+    "event_type": "entry",
+    "ts": "2025-11-06T07:12:53.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 9,
+    "admission_no": "24gce22010",
+    "event_type": "entry",
+    "ts": "2025-11-06T06:07:21.315Z",
+    "device_id": "esp32-device-001",
+    "name": "Carol Thompson"
+  },
+  {
+    "id": 23,
+    "admission_no": "24gce24043",
+    "event_type": "entry",
+    "ts": "2025-11-06T05:55:24.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Hill"
+  },
+  {
+    "id": 25,
+    "admission_no": "24gce25023",
+    "event_type": "entry",
+    "ts": "2025-11-06T05:26:36.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Taylor"
+  },
+  {
+    "id": 17,
+    "admission_no": "24gce23038",
+    "event_type": "entry",
+    "ts": "2025-11-06T05:10:39.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Scott"
+  },
+  {
+    "id": 22,
+    "admission_no": "24gce22033",
+    "event_type": "entry",
+    "ts": "2025-11-06T05:06:41.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Young"
+  },
+  {
+    "id": 20,
+    "admission_no": "24gce23019",
+    "event_type": "exit",
+    "ts": "2025-11-06T04:46:29.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Henry Allen"
+  },
+  {
+    "id": 16,
+    "admission_no": "24gce25049",
+    "event_type": "entry",
+    "ts": "2025-11-06T04:33:11.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lee"
+  },
+  {
+    "id": 5,
+    "admission_no": "24gce24036",
+    "event_type": "entry",
+    "ts": "2025-11-06T04:30:34.315Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Anderson"
+  },
+  {
+    "id": 39,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-11-05T12:50:18.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 36,
+    "admission_no": "24gce24005",
+    "event_type": "entry",
+    "ts": "2025-11-05T12:21:00.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Xavier Allen"
+  },
+  {
+    "id": 33,
+    "admission_no": "24gce24044",
+    "event_type": "entry",
+    "ts": "2025-11-05T12:13:20.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 40,
+    "admission_no": "24gce24017",
+    "event_type": "entry",
+    "ts": "2025-11-05T11:41:33.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice Clark"
+  },
+  {
+    "id": 38,
+    "admission_no": "24gce24045",
+    "event_type": "entry",
+    "ts": "2025-11-05T11:33:42.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Scott"
+  },
+  {
+    "id": 41,
+    "admission_no": "24gce23003",
+    "event_type": "entry",
+    "ts": "2025-11-05T10:36:14.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Miller"
+  },
+  {
+    "id": 31,
+    "admission_no": "24gce22033",
+    "event_type": "entry",
+    "ts": "2025-11-05T10:26:43.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Young"
+  },
+  {
+    "id": 42,
+    "admission_no": "24gce24026",
+    "event_type": "entry",
+    "ts": "2025-11-05T10:22:00.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Taylor"
+  },
+  {
+    "id": 28,
+    "admission_no": "24gce23042",
+    "event_type": "entry",
+    "ts": "2025-11-05T09:47:26.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Wendy Allen"
+  },
+  {
+    "id": 32,
+    "admission_no": "24gce23039",
+    "event_type": "entry",
+    "ts": "2025-11-05T09:16:10.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah White"
+  },
+  {
+    "id": 30,
+    "admission_no": "24gce24016",
+    "event_type": "entry",
+    "ts": "2025-11-05T08:48:13.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Taylor"
+  },
+  {
+    "id": 35,
+    "admission_no": "24gce25018",
+    "event_type": "entry",
+    "ts": "2025-11-05T04:43:33.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Martinez"
+  },
+  {
+    "id": 34,
+    "admission_no": "24gce25011",
+    "event_type": "entry",
+    "ts": "2025-11-05T04:27:16.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Xavier Harris"
+  },
+  {
+    "id": 29,
+    "admission_no": "24gce22024",
+    "event_type": "entry",
+    "ts": "2025-11-05T03:47:39.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Davis"
+  },
+  {
+    "id": 27,
+    "admission_no": "24gce24021",
+    "event_type": "entry",
+    "ts": "2025-11-05T03:41:46.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 37,
+    "admission_no": "24gce23022",
+    "event_type": "entry",
+    "ts": "2025-11-05T03:13:41.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 26,
+    "admission_no": "24gce23025",
+    "event_type": "entry",
+    "ts": "2025-11-05T02:50:59.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Thompson"
+  },
+  {
+    "id": 50,
+    "admission_no": "24gce24020",
+    "event_type": "entry",
+    "ts": "2025-11-04T13:15:56.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Karen Lopez"
+  },
+  {
+    "id": 46,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-11-04T13:06:30.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 49,
+    "admission_no": "24gce24016",
+    "event_type": "entry",
+    "ts": "2025-11-04T12:52:19.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Taylor"
+  },
+  {
+    "id": 56,
+    "admission_no": "24gce25041",
+    "event_type": "entry",
+    "ts": "2025-11-04T12:44:19.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 53,
+    "admission_no": "24gce24034",
+    "event_type": "exit",
+    "ts": "2025-11-04T09:40:09.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice White"
+  },
+  {
+    "id": 55,
+    "admission_no": "24gce23009",
+    "event_type": "entry",
+    "ts": "2025-11-04T09:36:11.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Walker"
+  },
+  {
+    "id": 43,
+    "admission_no": "24gce23022",
+    "event_type": "entry",
+    "ts": "2025-11-04T08:56:44.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 44,
+    "admission_no": "24gce24034",
+    "event_type": "entry",
+    "ts": "2025-11-04T08:24:13.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice White"
+  },
+  {
+    "id": 45,
+    "admission_no": "24gce25004",
+    "event_type": "entry",
+    "ts": "2025-11-04T08:01:37.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Davis"
+  },
+  {
+    "id": 52,
+    "admission_no": "24gce23028",
+    "event_type": "entry",
+    "ts": "2025-11-04T07:29:48.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Thompson"
+  },
+  {
+    "id": 51,
+    "admission_no": "24gce22002",
+    "event_type": "entry",
+    "ts": "2025-11-04T07:08:28.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Anderson"
+  },
+  {
+    "id": 48,
+    "admission_no": "24gce22024",
+    "event_type": "entry",
+    "ts": "2025-11-04T06:38:49.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Davis"
+  },
+  {
+    "id": 47,
+    "admission_no": "24gce25049",
+    "event_type": "entry",
+    "ts": "2025-11-04T06:31:05.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lee"
+  },
+  {
+    "id": 54,
+    "admission_no": "24gce22046",
+    "event_type": "entry",
+    "ts": "2025-11-04T03:25:31.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 68,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-11-03T13:29:43.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 75,
+    "admission_no": "24gce24044",
+    "event_type": "entry",
+    "ts": "2025-11-03T13:20:55.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 62,
+    "admission_no": "24gce23009",
+    "event_type": "entry",
+    "ts": "2025-11-03T13:05:42.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Walker"
+  },
+  {
+    "id": 70,
+    "admission_no": "24gce24034",
+    "event_type": "entry",
+    "ts": "2025-11-03T12:40:07.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice White"
+  },
+  {
+    "id": 64,
+    "admission_no": "24gce25049",
+    "event_type": "entry",
+    "ts": "2025-11-03T11:29:28.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lee"
+  },
+  {
+    "id": 69,
+    "admission_no": "24gce25023",
+    "event_type": "entry",
+    "ts": "2025-11-03T11:28:22.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Taylor"
+  },
+  {
+    "id": 81,
+    "admission_no": "24gce22024",
+    "event_type": "entry",
+    "ts": "2025-11-03T11:10:36.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Davis"
+  },
+  {
+    "id": 74,
+    "admission_no": "24gce24021",
+    "event_type": "entry",
+    "ts": "2025-11-03T11:08:27.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 78,
+    "admission_no": "24gce25041",
+    "event_type": "exit",
+    "ts": "2025-11-03T10:30:33.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 57,
+    "admission_no": "24gce22008",
+    "event_type": "entry",
+    "ts": "2025-11-03T10:21:35.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Anderson"
+  },
+  {
+    "id": 60,
+    "admission_no": "24gce23032",
+    "event_type": "entry",
+    "ts": "2025-11-03T09:21:13.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Bob Brown"
+  },
+  {
+    "id": 73,
+    "admission_no": "24gce24031",
+    "event_type": "entry",
+    "ts": "2025-11-03T08:52:05.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Wright"
+  },
+  {
+    "id": 77,
+    "admission_no": "24gce22048",
+    "event_type": "entry",
+    "ts": "2025-11-03T08:16:42.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Brown"
+  },
+  {
+    "id": 59,
+    "admission_no": "24gce23038",
+    "event_type": "entry",
+    "ts": "2025-11-03T07:03:33.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Scott"
+  },
+  {
+    "id": 79,
+    "admission_no": "24gce24034",
+    "event_type": "exit",
+    "ts": "2025-11-03T06:23:15.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice White"
+  },
+  {
+    "id": 76,
+    "admission_no": "24gce23022",
+    "event_type": "entry",
+    "ts": "2025-11-03T06:20:23.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 63,
+    "admission_no": "24gce25041",
+    "event_type": "entry",
+    "ts": "2025-11-03T06:08:16.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 67,
+    "admission_no": "24gce24020",
+    "event_type": "entry",
+    "ts": "2025-11-03T05:38:12.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Karen Lopez"
+  },
+  {
+    "id": 72,
+    "admission_no": "24gce25006",
+    "event_type": "entry",
+    "ts": "2025-11-03T05:34:21.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul King"
+  },
+  {
+    "id": 66,
+    "admission_no": "24gce25049",
+    "event_type": "exit",
+    "ts": "2025-11-03T05:25:52.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lee"
+  },
+  {
+    "id": 71,
+    "admission_no": "24gce23028",
+    "event_type": "entry",
+    "ts": "2025-11-03T04:23:05.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Thompson"
+  },
+  {
+    "id": 65,
+    "admission_no": "24gce23032",
+    "event_type": "exit",
+    "ts": "2025-11-03T03:27:04.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Bob Brown"
+  },
+  {
+    "id": 58,
+    "admission_no": "24gce23019",
+    "event_type": "entry",
+    "ts": "2025-11-03T03:04:22.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Henry Allen"
+  },
+  {
+    "id": 61,
+    "admission_no": "24gce25004",
+    "event_type": "entry",
+    "ts": "2025-11-03T02:59:20.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Davis"
+  },
+  {
+    "id": 80,
+    "admission_no": "24gce24031",
+    "event_type": "exit",
+    "ts": "2025-11-03T02:39:28.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Wright"
+  },
+  {
+    "id": 100,
+    "admission_no": "24gce22035",
+    "event_type": "entry",
+    "ts": "2025-11-02T13:25:44.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank White"
+  },
+  {
+    "id": 83,
+    "admission_no": "24gce23014",
+    "event_type": "entry",
+    "ts": "2025-11-02T12:38:10.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Hall"
+  },
+  {
+    "id": 91,
+    "admission_no": "24gce22050",
+    "event_type": "entry",
+    "ts": "2025-11-02T12:00:46.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 101,
+    "admission_no": "24gce24037",
+    "event_type": "entry",
+    "ts": "2025-11-02T11:47:40.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Hill"
+  },
+  {
+    "id": 88,
+    "admission_no": "24gce24036",
+    "event_type": "entry",
+    "ts": "2025-11-02T11:35:38.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Anderson"
+  },
+  {
+    "id": 96,
+    "admission_no": "24gce25011",
+    "event_type": "entry",
+    "ts": "2025-11-02T10:53:55.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Xavier Harris"
+  },
+  {
+    "id": 82,
+    "admission_no": "24gce25018",
+    "event_type": "entry",
+    "ts": "2025-11-02T10:18:32.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Martinez"
+  },
+  {
+    "id": 89,
+    "admission_no": "24gce23025",
+    "event_type": "entry",
+    "ts": "2025-11-02T10:13:37.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Thompson"
+  },
+  {
+    "id": 84,
+    "admission_no": "24gce25023",
+    "event_type": "entry",
+    "ts": "2025-11-02T10:10:28.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Taylor"
+  },
+  {
+    "id": 97,
+    "admission_no": "24gce22046",
+    "event_type": "entry",
+    "ts": "2025-11-02T09:51:00.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 85,
+    "admission_no": "24gce24013",
+    "event_type": "entry",
+    "ts": "2025-11-02T09:03:38.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Olivia Scott"
+  },
+  {
+    "id": 103,
+    "admission_no": "24gce23009",
+    "event_type": "entry",
+    "ts": "2025-11-02T09:01:29.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Walker"
+  },
+  {
+    "id": 95,
+    "admission_no": "24gce23039",
+    "event_type": "entry",
+    "ts": "2025-11-02T08:50:18.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah White"
+  },
+  {
+    "id": 90,
+    "admission_no": "24gce24045",
+    "event_type": "entry",
+    "ts": "2025-11-02T08:40:22.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Scott"
+  },
+  {
+    "id": 92,
+    "admission_no": "24gce24043",
+    "event_type": "entry",
+    "ts": "2025-11-02T08:09:16.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Hill"
+  },
+  {
+    "id": 98,
+    "admission_no": "24gce24034",
+    "event_type": "entry",
+    "ts": "2025-11-02T07:31:19.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice White"
+  },
+  {
+    "id": 99,
+    "admission_no": "24gce25049",
+    "event_type": "entry",
+    "ts": "2025-11-02T07:26:57.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lee"
+  },
+  {
+    "id": 93,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-11-02T05:54:03.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 102,
+    "admission_no": "24gce23042",
+    "event_type": "entry",
+    "ts": "2025-11-02T04:08:16.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Wendy Allen"
+  },
+  {
+    "id": 86,
+    "admission_no": "24gce22008",
+    "event_type": "entry",
+    "ts": "2025-11-02T03:44:03.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Anderson"
+  },
+  {
+    "id": 87,
+    "admission_no": "24gce23019",
+    "event_type": "entry",
+    "ts": "2025-11-02T03:42:38.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Henry Allen"
+  },
+  {
+    "id": 94,
+    "admission_no": "24gce24021",
+    "event_type": "entry",
+    "ts": "2025-11-02T02:36:24.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 112,
+    "admission_no": "24gce23009",
+    "event_type": "exit",
+    "ts": "2025-11-01T12:21:30.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Walker"
+  },
+  {
+    "id": 108,
+    "admission_no": "24gce25004",
+    "event_type": "entry",
+    "ts": "2025-11-01T12:18:44.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Davis"
+  },
+  {
+    "id": 117,
+    "admission_no": "24gce23042",
+    "event_type": "entry",
+    "ts": "2025-11-01T09:26:39.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Wendy Allen"
+  },
+  {
+    "id": 106,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-11-01T08:36:53.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 109,
+    "admission_no": "24gce22050",
+    "event_type": "entry",
+    "ts": "2025-11-01T08:01:05.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 104,
+    "admission_no": "24gce24013",
+    "event_type": "entry",
+    "ts": "2025-11-01T07:35:02.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Olivia Scott"
+  },
+  {
+    "id": 110,
+    "admission_no": "24gce23009",
+    "event_type": "entry",
+    "ts": "2025-11-01T06:49:38.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Walker"
+  },
+  {
+    "id": 118,
+    "admission_no": "24gce23003",
+    "event_type": "entry",
+    "ts": "2025-11-01T05:32:33.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Miller"
+  },
+  {
+    "id": 111,
+    "admission_no": "24gce22047",
+    "event_type": "entry",
+    "ts": "2025-11-01T05:24:55.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Johnson"
+  },
+  {
+    "id": 115,
+    "admission_no": "24gce22048",
+    "event_type": "entry",
+    "ts": "2025-11-01T05:08:05.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Brown"
+  },
+  {
+    "id": 114,
+    "admission_no": "24gce24001",
+    "event_type": "entry",
+    "ts": "2025-11-01T04:36:43.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Rodriguez"
+  },
+  {
+    "id": 113,
+    "admission_no": "24gce24040",
+    "event_type": "entry",
+    "ts": "2025-11-01T04:13:45.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Davis"
+  },
+  {
+    "id": 107,
+    "admission_no": "24gce24021",
+    "event_type": "entry",
+    "ts": "2025-11-01T04:02:35.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 105,
+    "admission_no": "24gce24020",
+    "event_type": "entry",
+    "ts": "2025-11-01T03:13:53.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Karen Lopez"
+  },
+  {
+    "id": 116,
+    "admission_no": "24gce24036",
+    "event_type": "entry",
+    "ts": "2025-11-01T03:00:36.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Anderson"
+  },
+  {
+    "id": 131,
+    "admission_no": "24gce22010",
+    "event_type": "entry",
+    "ts": "2025-10-31T13:23:04.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Carol Thompson"
+  },
+  {
+    "id": 121,
+    "admission_no": "24gce24037",
+    "event_type": "entry",
+    "ts": "2025-10-31T13:17:05.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Hill"
+  },
+  {
+    "id": 129,
+    "admission_no": "24gce23025",
+    "event_type": "entry",
+    "ts": "2025-10-31T12:31:47.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Thompson"
+  },
+  {
+    "id": 127,
+    "admission_no": "24gce23014",
+    "event_type": "entry",
+    "ts": "2025-10-31T12:20:43.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Hall"
+  },
+  {
+    "id": 132,
+    "admission_no": "24gce23038",
+    "event_type": "exit",
+    "ts": "2025-10-31T11:06:26.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Scott"
+  },
+  {
+    "id": 119,
+    "admission_no": "24gce24021",
+    "event_type": "entry",
+    "ts": "2025-10-31T10:42:34.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 122,
+    "admission_no": "24gce22002",
+    "event_type": "entry",
+    "ts": "2025-10-31T10:04:50.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Anderson"
+  },
+  {
+    "id": 135,
+    "admission_no": "24gce25041",
+    "event_type": "exit",
+    "ts": "2025-10-31T09:14:27.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 126,
+    "admission_no": "24gce25004",
+    "event_type": "entry",
+    "ts": "2025-10-31T09:12:51.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Davis"
+  },
+  {
+    "id": 134,
+    "admission_no": "24gce22033",
+    "event_type": "entry",
+    "ts": "2025-10-31T08:39:06.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Young"
+  },
+  {
+    "id": 123,
+    "admission_no": "24gce22008",
+    "event_type": "entry",
+    "ts": "2025-10-31T07:30:06.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Anderson"
+  },
+  {
+    "id": 130,
+    "admission_no": "24gce24034",
+    "event_type": "entry",
+    "ts": "2025-10-31T06:10:12.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice White"
+  },
+  {
+    "id": 124,
+    "admission_no": "24gce22050",
+    "event_type": "entry",
+    "ts": "2025-10-31T04:55:35.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 133,
+    "admission_no": "24gce24029",
+    "event_type": "entry",
+    "ts": "2025-10-31T04:07:10.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Wendy King"
+  },
+  {
+    "id": 128,
+    "admission_no": "24gce23038",
+    "event_type": "entry",
+    "ts": "2025-10-31T03:19:02.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Scott"
+  },
+  {
+    "id": 125,
+    "admission_no": "24gce24020",
+    "event_type": "entry",
+    "ts": "2025-10-31T02:56:38.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Karen Lopez"
+  },
+  {
+    "id": 120,
+    "admission_no": "24gce25041",
+    "event_type": "entry",
+    "ts": "2025-10-31T02:44:12.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 145,
+    "admission_no": "24gce24027",
+    "event_type": "exit",
+    "ts": "2025-10-30T13:13:15.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 141,
+    "admission_no": "24gce22015",
+    "event_type": "entry",
+    "ts": "2025-10-30T12:56:04.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Johnson"
+  },
+  {
+    "id": 142,
+    "admission_no": "24gce24013",
+    "event_type": "entry",
+    "ts": "2025-10-30T11:56:20.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Olivia Scott"
+  },
+  {
+    "id": 151,
+    "admission_no": "24gce24045",
+    "event_type": "entry",
+    "ts": "2025-10-30T09:30:24.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Scott"
+  },
+  {
+    "id": 137,
+    "admission_no": "24gce24031",
+    "event_type": "entry",
+    "ts": "2025-10-30T09:14:55.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Wright"
+  },
+  {
+    "id": 143,
+    "admission_no": "24gce22047",
+    "event_type": "entry",
+    "ts": "2025-10-30T08:40:04.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Johnson"
+  },
+  {
+    "id": 146,
+    "admission_no": "24gce22002",
+    "event_type": "entry",
+    "ts": "2025-10-30T08:08:48.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Anderson"
+  },
+  {
+    "id": 138,
+    "admission_no": "24gce24016",
+    "event_type": "entry",
+    "ts": "2025-10-30T07:41:48.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Taylor"
+  },
+  {
+    "id": 150,
+    "admission_no": "24gce24013",
+    "event_type": "exit",
+    "ts": "2025-10-30T05:51:45.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Olivia Scott"
+  },
+  {
+    "id": 147,
+    "admission_no": "24gce22007",
+    "event_type": "entry",
+    "ts": "2025-10-30T05:40:04.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Harris"
+  },
+  {
+    "id": 139,
+    "admission_no": "24gce24037",
+    "event_type": "entry",
+    "ts": "2025-10-30T05:27:42.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Hill"
+  },
+  {
+    "id": 149,
+    "admission_no": "24gce24037",
+    "event_type": "exit",
+    "ts": "2025-10-30T05:07:33.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Hill"
+  },
+  {
+    "id": 136,
+    "admission_no": "24gce22024",
+    "event_type": "entry",
+    "ts": "2025-10-30T04:54:20.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Davis"
+  },
+  {
+    "id": 144,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-10-30T04:41:51.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 148,
+    "admission_no": "24gce23039",
+    "event_type": "entry",
+    "ts": "2025-10-30T03:24:36.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah White"
+  },
+  {
+    "id": 140,
+    "admission_no": "24gce23003",
+    "event_type": "entry",
+    "ts": "2025-10-30T02:36:50.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Miller"
+  },
+  {
+    "id": 154,
+    "admission_no": "24gce25049",
+    "event_type": "entry",
+    "ts": "2025-10-29T12:36:08.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lee"
+  },
+  {
+    "id": 155,
+    "admission_no": "24gce24005",
+    "event_type": "entry",
+    "ts": "2025-10-29T12:30:59.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Xavier Allen"
+  },
+  {
+    "id": 152,
+    "admission_no": "24gce23042",
+    "event_type": "entry",
+    "ts": "2025-10-29T12:22:46.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Wendy Allen"
+  },
+  {
+    "id": 160,
+    "admission_no": "24gce23019",
+    "event_type": "entry",
+    "ts": "2025-10-29T12:13:01.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Henry Allen"
+  },
+  {
+    "id": 159,
+    "admission_no": "24gce24026",
+    "event_type": "entry",
+    "ts": "2025-10-29T12:12:02.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Taylor"
+  },
+  {
+    "id": 166,
+    "admission_no": "24gce23009",
+    "event_type": "entry",
+    "ts": "2025-10-29T10:56:02.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Walker"
+  },
+  {
+    "id": 158,
+    "admission_no": "24gce24013",
+    "event_type": "entry",
+    "ts": "2025-10-29T10:53:47.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Olivia Scott"
+  },
+  {
+    "id": 169,
+    "admission_no": "24gce25018",
+    "event_type": "entry",
+    "ts": "2025-10-29T10:52:10.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Martinez"
+  },
+  {
+    "id": 153,
+    "admission_no": "24gce25006",
+    "event_type": "entry",
+    "ts": "2025-10-29T10:35:03.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul King"
+  },
+  {
+    "id": 162,
+    "admission_no": "24gce25012",
+    "event_type": "entry",
+    "ts": "2025-10-29T09:32:49.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 164,
+    "admission_no": "24gce22030",
+    "event_type": "entry",
+    "ts": "2025-10-29T09:12:48.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Wilson"
+  },
+  {
+    "id": 167,
+    "admission_no": "24gce24044",
+    "event_type": "entry",
+    "ts": "2025-10-29T08:44:05.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 156,
+    "admission_no": "24gce22048",
+    "event_type": "entry",
+    "ts": "2025-10-29T08:08:34.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Brown"
+  },
+  {
+    "id": 171,
+    "admission_no": "24gce25004",
+    "event_type": "entry",
+    "ts": "2025-10-29T08:05:04.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Davis"
+  },
+  {
+    "id": 165,
+    "admission_no": "24gce25012",
+    "event_type": "exit",
+    "ts": "2025-10-29T05:21:29.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 170,
+    "admission_no": "24gce23028",
+    "event_type": "entry",
+    "ts": "2025-10-29T04:22:40.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Thompson"
+  },
+  {
+    "id": 157,
+    "admission_no": "24gce22024",
+    "event_type": "entry",
+    "ts": "2025-10-29T04:13:30.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Davis"
+  },
+  {
+    "id": 163,
+    "admission_no": "24gce23019",
+    "event_type": "exit",
+    "ts": "2025-10-29T03:22:00.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Henry Allen"
+  },
+  {
+    "id": 161,
+    "admission_no": "24gce22035",
+    "event_type": "entry",
+    "ts": "2025-10-29T02:48:31.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank White"
+  },
+  {
+    "id": 168,
+    "admission_no": "24gce23042",
+    "event_type": "exit",
+    "ts": "2025-10-29T02:48:20.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Wendy Allen"
+  },
+  {
+    "id": 191,
+    "admission_no": "24gce23014",
+    "event_type": "entry",
+    "ts": "2025-10-28T13:19:20.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Hall"
+  },
+  {
+    "id": 193,
+    "admission_no": "24gce25023",
+    "event_type": "entry",
+    "ts": "2025-10-28T13:16:18.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Taylor"
+  },
+  {
+    "id": 177,
+    "admission_no": "24gce23038",
+    "event_type": "exit",
+    "ts": "2025-10-28T13:15:53.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Scott"
+  },
+  {
+    "id": 174,
+    "admission_no": "24gce22015",
+    "event_type": "entry",
+    "ts": "2025-10-28T12:25:07.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Johnson"
+  },
+  {
+    "id": 179,
+    "admission_no": "24gce24005",
+    "event_type": "entry",
+    "ts": "2025-10-28T12:12:38.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Xavier Allen"
+  },
+  {
+    "id": 178,
+    "admission_no": "24gce23039",
+    "event_type": "exit",
+    "ts": "2025-10-28T11:20:08.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah White"
+  },
+  {
+    "id": 184,
+    "admission_no": "24gce25006",
+    "event_type": "entry",
+    "ts": "2025-10-28T11:01:52.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul King"
+  },
+  {
+    "id": 176,
+    "admission_no": "24gce23039",
+    "event_type": "entry",
+    "ts": "2025-10-28T10:10:27.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah White"
+  },
+  {
+    "id": 190,
+    "admission_no": "24gce24036",
+    "event_type": "exit",
+    "ts": "2025-10-28T09:11:22.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Anderson"
+  },
+  {
+    "id": 175,
+    "admission_no": "24gce24031",
+    "event_type": "entry",
+    "ts": "2025-10-28T07:57:05.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Wright"
+  },
+  {
+    "id": 182,
+    "admission_no": "24gce22002",
+    "event_type": "entry",
+    "ts": "2025-10-28T07:35:58.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Anderson"
+  },
+  {
+    "id": 186,
+    "admission_no": "24gce24036",
+    "event_type": "entry",
+    "ts": "2025-10-28T06:17:31.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Anderson"
+  },
+  {
+    "id": 180,
+    "admission_no": "24gce23028",
+    "event_type": "entry",
+    "ts": "2025-10-28T05:48:48.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Thompson"
+  },
+  {
+    "id": 187,
+    "admission_no": "24gce22008",
+    "event_type": "entry",
+    "ts": "2025-10-28T05:48:29.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Anderson"
+  },
+  {
+    "id": 189,
+    "admission_no": "24gce23025",
+    "event_type": "entry",
+    "ts": "2025-10-28T05:41:35.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Thompson"
+  },
+  {
+    "id": 188,
+    "admission_no": "24gce25012",
+    "event_type": "entry",
+    "ts": "2025-10-28T05:30:13.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 183,
+    "admission_no": "24gce24001",
+    "event_type": "entry",
+    "ts": "2025-10-28T04:56:24.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Rodriguez"
+  },
+  {
+    "id": 192,
+    "admission_no": "24gce23038",
+    "event_type": "entry",
+    "ts": "2025-10-28T04:53:46.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Scott"
+  },
+  {
+    "id": 181,
+    "admission_no": "24gce25004",
+    "event_type": "entry",
+    "ts": "2025-10-28T04:31:50.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Davis"
+  },
+  {
+    "id": 173,
+    "admission_no": "24gce23038",
+    "event_type": "entry",
+    "ts": "2025-10-28T03:05:09.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Scott"
+  },
+  {
+    "id": 185,
+    "admission_no": "24gce23003",
+    "event_type": "entry",
+    "ts": "2025-10-28T02:45:39.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Miller"
+  },
+  {
+    "id": 172,
+    "admission_no": "24gce24016",
+    "event_type": "entry",
+    "ts": "2025-10-28T02:32:01.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Taylor"
+  },
+  {
+    "id": 203,
+    "admission_no": "24gce22007",
+    "event_type": "entry",
+    "ts": "2025-10-27T13:05:11.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Harris"
+  },
+  {
+    "id": 207,
+    "admission_no": "24gce25012",
+    "event_type": "entry",
+    "ts": "2025-10-27T13:05:02.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 204,
+    "admission_no": "24gce22010",
+    "event_type": "entry",
+    "ts": "2025-10-27T11:33:28.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Carol Thompson"
+  },
+  {
+    "id": 200,
+    "admission_no": "24gce25018",
+    "event_type": "entry",
+    "ts": "2025-10-27T11:15:34.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Martinez"
+  },
+  {
+    "id": 206,
+    "admission_no": "24gce25041",
+    "event_type": "entry",
+    "ts": "2025-10-27T10:36:48.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 202,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-10-27T09:56:12.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 198,
+    "admission_no": "24gce24029",
+    "event_type": "entry",
+    "ts": "2025-10-27T09:41:10.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Wendy King"
+  },
+  {
+    "id": 194,
+    "admission_no": "24gce25004",
+    "event_type": "entry",
+    "ts": "2025-10-27T08:59:53.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Davis"
+  },
+  {
+    "id": 199,
+    "admission_no": "24gce24044",
+    "event_type": "entry",
+    "ts": "2025-10-27T08:49:15.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 196,
+    "admission_no": "24gce23028",
+    "event_type": "entry",
+    "ts": "2025-10-27T08:44:23.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Thompson"
+  },
+  {
+    "id": 201,
+    "admission_no": "24gce22002",
+    "event_type": "entry",
+    "ts": "2025-10-27T07:41:01.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Anderson"
+  },
+  {
+    "id": 208,
+    "admission_no": "24gce23028",
+    "event_type": "exit",
+    "ts": "2025-10-27T05:52:50.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Thompson"
+  },
+  {
+    "id": 209,
+    "admission_no": "24gce22007",
+    "event_type": "exit",
+    "ts": "2025-10-27T05:40:56.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Harris"
+  },
+  {
+    "id": 205,
+    "admission_no": "24gce24020",
+    "event_type": "entry",
+    "ts": "2025-10-27T04:43:46.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Karen Lopez"
+  },
+  {
+    "id": 197,
+    "admission_no": "24gce24021",
+    "event_type": "entry",
+    "ts": "2025-10-27T04:37:12.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 195,
+    "admission_no": "24gce22008",
+    "event_type": "entry",
+    "ts": "2025-10-27T04:04:28.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Anderson"
+  },
+  {
+    "id": 210,
+    "admission_no": "24gce24016",
+    "event_type": "entry",
+    "ts": "2025-10-26T12:24:23.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Taylor"
+  },
+  {
+    "id": 217,
+    "admission_no": "24gce22050",
+    "event_type": "entry",
+    "ts": "2025-10-26T12:10:30.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 218,
+    "admission_no": "24gce24013",
+    "event_type": "exit",
+    "ts": "2025-10-26T11:53:09.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Olivia Scott"
+  },
+  {
+    "id": 223,
+    "admission_no": "24gce25023",
+    "event_type": "entry",
+    "ts": "2025-10-26T11:42:24.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Taylor"
+  },
+  {
+    "id": 228,
+    "admission_no": "24gce25004",
+    "event_type": "entry",
+    "ts": "2025-10-26T10:38:52.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Davis"
+  },
+  {
+    "id": 225,
+    "admission_no": "24gce24034",
+    "event_type": "entry",
+    "ts": "2025-10-26T10:19:58.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice White"
+  },
+  {
+    "id": 229,
+    "admission_no": "24gce23025",
+    "event_type": "entry",
+    "ts": "2025-10-26T10:04:05.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Thompson"
+  },
+  {
+    "id": 227,
+    "admission_no": "24gce25023",
+    "event_type": "entry",
+    "ts": "2025-10-26T09:47:08.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Taylor"
+  },
+  {
+    "id": 211,
+    "admission_no": "24gce22035",
+    "event_type": "entry",
+    "ts": "2025-10-26T09:16:20.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank White"
+  },
+  {
+    "id": 219,
+    "admission_no": "24gce23009",
+    "event_type": "entry",
+    "ts": "2025-10-26T08:50:25.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Walker"
+  },
+  {
+    "id": 230,
+    "admission_no": "24gce25012",
+    "event_type": "entry",
+    "ts": "2025-10-26T06:46:37.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 226,
+    "admission_no": "24gce25023",
+    "event_type": "exit",
+    "ts": "2025-10-26T06:43:10.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Taylor"
+  },
+  {
+    "id": 232,
+    "admission_no": "24gce22008",
+    "event_type": "entry",
+    "ts": "2025-10-26T06:01:38.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Anderson"
+  },
+  {
+    "id": 224,
+    "admission_no": "24gce23038",
+    "event_type": "exit",
+    "ts": "2025-10-26T05:35:24.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Scott"
+  },
+  {
+    "id": 213,
+    "admission_no": "24gce24013",
+    "event_type": "entry",
+    "ts": "2025-10-26T05:24:59.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Olivia Scott"
+  },
+  {
+    "id": 212,
+    "admission_no": "24gce24017",
+    "event_type": "entry",
+    "ts": "2025-10-26T05:14:49.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice Clark"
+  },
+  {
+    "id": 221,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-10-26T04:42:35.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 216,
+    "admission_no": "24gce24020",
+    "event_type": "entry",
+    "ts": "2025-10-26T04:33:03.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Karen Lopez"
+  },
+  {
+    "id": 222,
+    "admission_no": "24gce22010",
+    "event_type": "entry",
+    "ts": "2025-10-26T03:57:41.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Carol Thompson"
+  },
+  {
+    "id": 220,
+    "admission_no": "24gce24021",
+    "event_type": "entry",
+    "ts": "2025-10-26T03:56:44.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 215,
+    "admission_no": "24gce23038",
+    "event_type": "entry",
+    "ts": "2025-10-26T03:51:51.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Scott"
+  },
+  {
+    "id": 214,
+    "admission_no": "24gce22035",
+    "event_type": "exit",
+    "ts": "2025-10-26T03:40:26.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank White"
+  },
+  {
+    "id": 231,
+    "admission_no": "24gce24001",
+    "event_type": "entry",
+    "ts": "2025-10-26T03:12:23.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Rodriguez"
+  },
+  {
+    "id": 245,
+    "admission_no": "24gce25011",
+    "event_type": "entry",
+    "ts": "2025-10-25T13:23:59.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Xavier Harris"
+  },
+  {
+    "id": 244,
+    "admission_no": "24gce24021",
+    "event_type": "exit",
+    "ts": "2025-10-25T13:19:45.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 247,
+    "admission_no": "24gce25041",
+    "event_type": "entry",
+    "ts": "2025-10-25T13:02:44.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 255,
+    "admission_no": "24gce22010",
+    "event_type": "entry",
+    "ts": "2025-10-25T12:47:58.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Carol Thompson"
+  },
+  {
+    "id": 236,
+    "admission_no": "24gce24031",
+    "event_type": "entry",
+    "ts": "2025-10-25T12:38:47.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Wright"
+  },
+  {
+    "id": 256,
+    "admission_no": "24gce25023",
+    "event_type": "entry",
+    "ts": "2025-10-25T11:57:52.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Taylor"
+  },
+  {
+    "id": 249,
+    "admission_no": "24gce23019",
+    "event_type": "entry",
+    "ts": "2025-10-25T11:42:08.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Henry Allen"
+  },
+  {
+    "id": 234,
+    "admission_no": "24gce24021",
+    "event_type": "exit",
+    "ts": "2025-10-25T10:59:22.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 233,
+    "admission_no": "24gce24021",
+    "event_type": "entry",
+    "ts": "2025-10-25T10:50:10.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 251,
+    "admission_no": "24gce24031",
+    "event_type": "exit",
+    "ts": "2025-10-25T09:18:45.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Wright"
+  },
+  {
+    "id": 238,
+    "admission_no": "24gce25004",
+    "event_type": "entry",
+    "ts": "2025-10-25T08:55:36.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Davis"
+  },
+  {
+    "id": 253,
+    "admission_no": "24gce24036",
+    "event_type": "entry",
+    "ts": "2025-10-25T08:46:19.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Anderson"
+  },
+  {
+    "id": 235,
+    "admission_no": "24gce23019",
+    "event_type": "entry",
+    "ts": "2025-10-25T07:56:51.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Henry Allen"
+  },
+  {
+    "id": 243,
+    "admission_no": "24gce23019",
+    "event_type": "exit",
+    "ts": "2025-10-25T07:11:21.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Henry Allen"
+  },
+  {
+    "id": 237,
+    "admission_no": "24gce24021",
+    "event_type": "entry",
+    "ts": "2025-10-25T06:33:31.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 246,
+    "admission_no": "24gce24045",
+    "event_type": "entry",
+    "ts": "2025-10-25T06:32:28.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Scott"
+  },
+  {
+    "id": 257,
+    "admission_no": "24gce23022",
+    "event_type": "entry",
+    "ts": "2025-10-25T06:06:20.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 252,
+    "admission_no": "24gce24037",
+    "event_type": "entry",
+    "ts": "2025-10-25T05:40:47.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Hill"
+  },
+  {
+    "id": 242,
+    "admission_no": "24gce25018",
+    "event_type": "entry",
+    "ts": "2025-10-25T05:33:44.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Martinez"
+  },
+  {
+    "id": 240,
+    "admission_no": "24gce24044",
+    "event_type": "entry",
+    "ts": "2025-10-25T05:31:15.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 248,
+    "admission_no": "24gce24027",
+    "event_type": "exit",
+    "ts": "2025-10-25T04:03:56.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 241,
+    "admission_no": "24gce24016",
+    "event_type": "entry",
+    "ts": "2025-10-25T03:51:59.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Taylor"
+  },
+  {
+    "id": 254,
+    "admission_no": "24gce22047",
+    "event_type": "entry",
+    "ts": "2025-10-25T03:48:06.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Johnson"
+  },
+  {
+    "id": 239,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-10-25T03:15:54.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 250,
+    "admission_no": "24gce23025",
+    "event_type": "entry",
+    "ts": "2025-10-25T03:00:52.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Thompson"
+  },
+  {
+    "id": 269,
+    "admission_no": "24gce22015",
+    "event_type": "entry",
+    "ts": "2025-10-24T12:52:20.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Johnson"
+  },
+  {
+    "id": 259,
+    "admission_no": "24gce25018",
+    "event_type": "entry",
+    "ts": "2025-10-24T12:27:37.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Martinez"
+  },
+  {
+    "id": 263,
+    "admission_no": "24gce22035",
+    "event_type": "entry",
+    "ts": "2025-10-24T11:50:23.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank White"
+  },
+  {
+    "id": 267,
+    "admission_no": "24gce24013",
+    "event_type": "entry",
+    "ts": "2025-10-24T11:33:52.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Olivia Scott"
+  },
+  {
+    "id": 262,
+    "admission_no": "24gce25011",
+    "event_type": "entry",
+    "ts": "2025-10-24T11:33:44.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Xavier Harris"
+  },
+  {
+    "id": 258,
+    "admission_no": "24gce25012",
+    "event_type": "entry",
+    "ts": "2025-10-24T11:11:46.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 265,
+    "admission_no": "24gce22035",
+    "event_type": "exit",
+    "ts": "2025-10-24T10:00:17.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank White"
+  },
+  {
+    "id": 261,
+    "admission_no": "24gce22002",
+    "event_type": "entry",
+    "ts": "2025-10-24T08:07:21.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Anderson"
+  },
+  {
+    "id": 268,
+    "admission_no": "24gce23009",
+    "event_type": "entry",
+    "ts": "2025-10-24T06:11:50.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Walker"
+  },
+  {
+    "id": 270,
+    "admission_no": "24gce22048",
+    "event_type": "entry",
+    "ts": "2025-10-24T06:02:42.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Brown"
+  },
+  {
+    "id": 264,
+    "admission_no": "24gce22007",
+    "event_type": "entry",
+    "ts": "2025-10-24T05:11:48.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Harris"
+  },
+  {
+    "id": 266,
+    "admission_no": "24gce23038",
+    "event_type": "entry",
+    "ts": "2025-10-24T04:49:25.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Scott"
+  },
+  {
+    "id": 271,
+    "admission_no": "24gce24034",
+    "event_type": "entry",
+    "ts": "2025-10-24T04:36:29.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice White"
+  },
+  {
+    "id": 260,
+    "admission_no": "24gce22046",
+    "event_type": "entry",
+    "ts": "2025-10-24T04:21:03.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 281,
+    "admission_no": "24gce22046",
+    "event_type": "entry",
+    "ts": "2025-10-23T13:00:43.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 276,
+    "admission_no": "24gce24001",
+    "event_type": "entry",
+    "ts": "2025-10-23T12:58:56.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Rodriguez"
+  },
+  {
+    "id": 275,
+    "admission_no": "24gce22010",
+    "event_type": "entry",
+    "ts": "2025-10-23T12:44:15.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Carol Thompson"
+  },
+  {
+    "id": 286,
+    "admission_no": "24gce23014",
+    "event_type": "entry",
+    "ts": "2025-10-23T12:43:17.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Hall"
+  },
+  {
+    "id": 279,
+    "admission_no": "24gce23009",
+    "event_type": "entry",
+    "ts": "2025-10-23T12:32:05.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Walker"
+  },
+  {
+    "id": 285,
+    "admission_no": "24gce23022",
+    "event_type": "exit",
+    "ts": "2025-10-23T12:26:42.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 274,
+    "admission_no": "24gce23038",
+    "event_type": "entry",
+    "ts": "2025-10-23T11:26:35.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Scott"
+  },
+  {
+    "id": 282,
+    "admission_no": "24gce24001",
+    "event_type": "entry",
+    "ts": "2025-10-23T10:42:55.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Rodriguez"
+  },
+  {
+    "id": 273,
+    "admission_no": "24gce23014",
+    "event_type": "entry",
+    "ts": "2025-10-23T09:27:19.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Hall"
+  },
+  {
+    "id": 278,
+    "admission_no": "24gce23022",
+    "event_type": "entry",
+    "ts": "2025-10-23T09:23:03.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 283,
+    "admission_no": "24gce25041",
+    "event_type": "entry",
+    "ts": "2025-10-23T09:19:47.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 277,
+    "admission_no": "24gce23014",
+    "event_type": "exit",
+    "ts": "2025-10-23T07:31:29.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Hall"
+  },
+  {
+    "id": 280,
+    "admission_no": "24gce24001",
+    "event_type": "exit",
+    "ts": "2025-10-23T04:13:40.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Rodriguez"
+  },
+  {
+    "id": 272,
+    "admission_no": "24gce24016",
+    "event_type": "entry",
+    "ts": "2025-10-23T03:04:24.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Taylor"
+  },
+  {
+    "id": 284,
+    "admission_no": "24gce22030",
+    "event_type": "entry",
+    "ts": "2025-10-23T02:53:35.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Wilson"
+  },
+  {
+    "id": 306,
+    "admission_no": "24gce25049",
+    "event_type": "entry",
+    "ts": "2025-10-22T12:02:25.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lee"
+  },
+  {
+    "id": 307,
+    "admission_no": "24gce25049",
+    "event_type": "exit",
+    "ts": "2025-10-22T11:39:53.316Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lee"
+  },
+  {
+    "id": 300,
+    "admission_no": "24gce23014",
+    "event_type": "entry",
+    "ts": "2025-10-22T11:04:02.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Hall"
+  },
+  {
+    "id": 288,
+    "admission_no": "24gce25012",
+    "event_type": "entry",
+    "ts": "2025-10-22T10:47:51.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 296,
+    "admission_no": "24gce24020",
+    "event_type": "entry",
+    "ts": "2025-10-22T10:42:16.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Karen Lopez"
+  },
+  {
+    "id": 311,
+    "admission_no": "24gce24021",
+    "event_type": "entry",
+    "ts": "2025-10-22T10:40:21.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 308,
+    "admission_no": "24gce25041",
+    "event_type": "entry",
+    "ts": "2025-10-22T10:14:21.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 289,
+    "admission_no": "24gce22033",
+    "event_type": "entry",
+    "ts": "2025-10-22T09:50:34.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Young"
+  },
+  {
+    "id": 301,
+    "admission_no": "24gce23042",
+    "event_type": "exit",
+    "ts": "2025-10-22T09:46:14.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Wendy Allen"
+  },
+  {
+    "id": 312,
+    "admission_no": "24gce25004",
+    "event_type": "entry",
+    "ts": "2025-10-22T09:21:13.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Davis"
+  },
+  {
+    "id": 298,
+    "admission_no": "24gce22010",
+    "event_type": "entry",
+    "ts": "2025-10-22T09:12:02.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Carol Thompson"
+  },
+  {
+    "id": 295,
+    "admission_no": "24gce24045",
+    "event_type": "entry",
+    "ts": "2025-10-22T08:37:57.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Scott"
+  },
+  {
+    "id": 305,
+    "admission_no": "24gce24037",
+    "event_type": "entry",
+    "ts": "2025-10-22T08:37:05.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Hill"
+  },
+  {
+    "id": 291,
+    "admission_no": "24gce22002",
+    "event_type": "entry",
+    "ts": "2025-10-22T08:33:29.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Anderson"
+  },
+  {
+    "id": 303,
+    "admission_no": "24gce22035",
+    "event_type": "entry",
+    "ts": "2025-10-22T07:52:11.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank White"
+  },
+  {
+    "id": 302,
+    "admission_no": "24gce24020",
+    "event_type": "exit",
+    "ts": "2025-10-22T06:56:44.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Karen Lopez"
+  },
+  {
+    "id": 293,
+    "admission_no": "24gce25023",
+    "event_type": "entry",
+    "ts": "2025-10-22T06:53:06.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Taylor"
+  },
+  {
+    "id": 294,
+    "admission_no": "24gce25041",
+    "event_type": "entry",
+    "ts": "2025-10-22T06:30:03.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 290,
+    "admission_no": "24gce23042",
+    "event_type": "entry",
+    "ts": "2025-10-22T06:00:41.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Wendy Allen"
+  },
+  {
+    "id": 299,
+    "admission_no": "24gce25041",
+    "event_type": "exit",
+    "ts": "2025-10-22T05:20:41.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 287,
+    "admission_no": "24gce25041",
+    "event_type": "entry",
+    "ts": "2025-10-22T04:49:43.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 309,
+    "admission_no": "24gce24043",
+    "event_type": "entry",
+    "ts": "2025-10-22T04:45:23.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Hill"
+  },
+  {
+    "id": 304,
+    "admission_no": "24gce24034",
+    "event_type": "entry",
+    "ts": "2025-10-22T04:28:01.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice White"
+  },
+  {
+    "id": 292,
+    "admission_no": "24gce25041",
+    "event_type": "exit",
+    "ts": "2025-10-22T03:56:39.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 310,
+    "admission_no": "24gce24040",
+    "event_type": "entry",
+    "ts": "2025-10-22T03:51:29.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Davis"
+  },
+  {
+    "id": 297,
+    "admission_no": "24gce23039",
+    "event_type": "entry",
+    "ts": "2025-10-22T03:11:25.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah White"
+  },
+  {
+    "id": 330,
+    "admission_no": "24gce24020",
+    "event_type": "entry",
+    "ts": "2025-10-21T13:10:40.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Karen Lopez"
+  },
+  {
+    "id": 315,
+    "admission_no": "24gce22010",
+    "event_type": "entry",
+    "ts": "2025-10-21T11:18:00.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Carol Thompson"
+  },
+  {
+    "id": 314,
+    "admission_no": "24gce25041",
+    "event_type": "entry",
+    "ts": "2025-10-21T10:50:54.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 324,
+    "admission_no": "24gce25023",
+    "event_type": "entry",
+    "ts": "2025-10-21T10:42:17.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Taylor"
+  },
+  {
+    "id": 317,
+    "admission_no": "24gce24045",
+    "event_type": "entry",
+    "ts": "2025-10-21T09:33:47.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Scott"
+  },
+  {
+    "id": 321,
+    "admission_no": "24gce22048",
+    "event_type": "entry",
+    "ts": "2025-10-21T09:18:10.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Brown"
+  },
+  {
+    "id": 329,
+    "admission_no": "24gce24013",
+    "event_type": "entry",
+    "ts": "2025-10-21T09:11:39.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Olivia Scott"
+  },
+  {
+    "id": 316,
+    "admission_no": "24gce24031",
+    "event_type": "entry",
+    "ts": "2025-10-21T08:48:41.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Wright"
+  },
+  {
+    "id": 326,
+    "admission_no": "24gce24021",
+    "event_type": "entry",
+    "ts": "2025-10-21T08:41:38.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 328,
+    "admission_no": "24gce23039",
+    "event_type": "entry",
+    "ts": "2025-10-21T08:28:41.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah White"
+  },
+  {
+    "id": 313,
+    "admission_no": "24gce23014",
+    "event_type": "entry",
+    "ts": "2025-10-21T08:24:06.316Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Hall"
+  },
+  {
+    "id": 327,
+    "admission_no": "24gce23042",
+    "event_type": "entry",
+    "ts": "2025-10-21T08:13:53.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Wendy Allen"
+  },
+  {
+    "id": 323,
+    "admission_no": "24gce23014",
+    "event_type": "exit",
+    "ts": "2025-10-21T07:41:39.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Hall"
+  },
+  {
+    "id": 319,
+    "admission_no": "24gce23019",
+    "event_type": "entry",
+    "ts": "2025-10-21T06:57:22.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Henry Allen"
+  },
+  {
+    "id": 318,
+    "admission_no": "24gce22015",
+    "event_type": "entry",
+    "ts": "2025-10-21T05:56:32.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Johnson"
+  },
+  {
+    "id": 322,
+    "admission_no": "24gce24031",
+    "event_type": "exit",
+    "ts": "2025-10-21T05:38:05.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Wright"
+  },
+  {
+    "id": 320,
+    "admission_no": "24gce23009",
+    "event_type": "entry",
+    "ts": "2025-10-21T04:08:52.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Walker"
+  },
+  {
+    "id": 325,
+    "admission_no": "24gce22030",
+    "event_type": "entry",
+    "ts": "2025-10-21T03:20:43.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Wilson"
+  },
+  {
+    "id": 337,
+    "admission_no": "24gce22008",
+    "event_type": "entry",
+    "ts": "2025-10-20T13:29:53.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Anderson"
+  },
+  {
+    "id": 349,
+    "admission_no": "24gce24016",
+    "event_type": "entry",
+    "ts": "2025-10-20T13:05:49.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Taylor"
+  },
+  {
+    "id": 336,
+    "admission_no": "24gce22047",
+    "event_type": "entry",
+    "ts": "2025-10-20T12:53:33.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Johnson"
+  },
+  {
+    "id": 331,
+    "admission_no": "24gce22035",
+    "event_type": "entry",
+    "ts": "2025-10-20T12:18:53.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank White"
+  },
+  {
+    "id": 332,
+    "admission_no": "24gce24031",
+    "event_type": "entry",
+    "ts": "2025-10-20T12:13:54.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Wright"
+  },
+  {
+    "id": 338,
+    "admission_no": "24gce22035",
+    "event_type": "entry",
+    "ts": "2025-10-20T12:12:15.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank White"
+  },
+  {
+    "id": 341,
+    "admission_no": "24gce24043",
+    "event_type": "entry",
+    "ts": "2025-10-20T11:16:53.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Hill"
+  },
+  {
+    "id": 334,
+    "admission_no": "24gce22035",
+    "event_type": "exit",
+    "ts": "2025-10-20T11:04:23.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank White"
+  },
+  {
+    "id": 333,
+    "admission_no": "24gce24034",
+    "event_type": "entry",
+    "ts": "2025-10-20T09:54:45.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice White"
+  },
+  {
+    "id": 345,
+    "admission_no": "24gce24027",
+    "event_type": "exit",
+    "ts": "2025-10-20T09:51:15.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 340,
+    "admission_no": "24gce25004",
+    "event_type": "entry",
+    "ts": "2025-10-20T08:50:52.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Davis"
+  },
+  {
+    "id": 343,
+    "admission_no": "24gce22033",
+    "event_type": "entry",
+    "ts": "2025-10-20T08:32:18.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Young"
+  },
+  {
+    "id": 348,
+    "admission_no": "24gce22033",
+    "event_type": "exit",
+    "ts": "2025-10-20T08:05:14.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Young"
+  },
+  {
+    "id": 346,
+    "admission_no": "24gce22030",
+    "event_type": "entry",
+    "ts": "2025-10-20T05:40:22.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Wilson"
+  },
+  {
+    "id": 344,
+    "admission_no": "24gce24043",
+    "event_type": "exit",
+    "ts": "2025-10-20T05:40:11.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Hill"
+  },
+  {
+    "id": 347,
+    "admission_no": "24gce25012",
+    "event_type": "entry",
+    "ts": "2025-10-20T05:34:28.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 335,
+    "admission_no": "24gce24045",
+    "event_type": "entry",
+    "ts": "2025-10-20T05:24:27.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Scott"
+  },
+  {
+    "id": 342,
+    "admission_no": "24gce24026",
+    "event_type": "entry",
+    "ts": "2025-10-20T05:16:59.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Taylor"
+  },
+  {
+    "id": 339,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-10-20T03:55:25.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 358,
+    "admission_no": "24gce22024",
+    "event_type": "entry",
+    "ts": "2025-10-19T13:06:10.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Davis"
+  },
+  {
+    "id": 357,
+    "admission_no": "24gce25011",
+    "event_type": "entry",
+    "ts": "2025-10-19T12:30:58.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Xavier Harris"
+  },
+  {
+    "id": 354,
+    "admission_no": "24gce23009",
+    "event_type": "entry",
+    "ts": "2025-10-19T11:42:25.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Walker"
+  },
+  {
+    "id": 368,
+    "admission_no": "24gce22046",
+    "event_type": "entry",
+    "ts": "2025-10-19T11:33:58.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 366,
+    "admission_no": "24gce23028",
+    "event_type": "entry",
+    "ts": "2025-10-19T10:28:15.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Thompson"
+  },
+  {
+    "id": 363,
+    "admission_no": "24gce23009",
+    "event_type": "exit",
+    "ts": "2025-10-19T09:54:16.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Walker"
+  },
+  {
+    "id": 362,
+    "admission_no": "24gce25011",
+    "event_type": "exit",
+    "ts": "2025-10-19T09:11:41.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Xavier Harris"
+  },
+  {
+    "id": 351,
+    "admission_no": "24gce25006",
+    "event_type": "entry",
+    "ts": "2025-10-19T08:10:08.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul King"
+  },
+  {
+    "id": 356,
+    "admission_no": "24gce24031",
+    "event_type": "entry",
+    "ts": "2025-10-19T08:05:09.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Wright"
+  },
+  {
+    "id": 355,
+    "admission_no": "24gce22048",
+    "event_type": "entry",
+    "ts": "2025-10-19T07:50:31.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Brown"
+  },
+  {
+    "id": 359,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-10-19T07:31:24.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 361,
+    "admission_no": "24gce22002",
+    "event_type": "entry",
+    "ts": "2025-10-19T07:19:01.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Anderson"
+  },
+  {
+    "id": 364,
+    "admission_no": "24gce22007",
+    "event_type": "entry",
+    "ts": "2025-10-19T07:17:30.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Harris"
+  },
+  {
+    "id": 352,
+    "admission_no": "24gce24036",
+    "event_type": "entry",
+    "ts": "2025-10-19T07:11:49.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Anderson"
+  },
+  {
+    "id": 360,
+    "admission_no": "24gce23042",
+    "event_type": "entry",
+    "ts": "2025-10-19T07:10:34.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Wendy Allen"
+  },
+  {
+    "id": 353,
+    "admission_no": "24gce24043",
+    "event_type": "entry",
+    "ts": "2025-10-19T06:56:17.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Hill"
+  },
+  {
+    "id": 369,
+    "admission_no": "24gce23019",
+    "event_type": "entry",
+    "ts": "2025-10-19T05:22:44.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Henry Allen"
+  },
+  {
+    "id": 365,
+    "admission_no": "24gce22008",
+    "event_type": "entry",
+    "ts": "2025-10-19T05:20:21.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Anderson"
+  },
+  {
+    "id": 367,
+    "admission_no": "24gce25006",
+    "event_type": "exit",
+    "ts": "2025-10-19T05:06:33.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul King"
+  },
+  {
+    "id": 350,
+    "admission_no": "24gce24017",
+    "event_type": "entry",
+    "ts": "2025-10-19T02:34:33.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice Clark"
+  },
+  {
+    "id": 389,
+    "admission_no": "24gce22030",
+    "event_type": "entry",
+    "ts": "2025-10-18T13:22:18.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Wilson"
+  },
+  {
+    "id": 374,
+    "admission_no": "24gce24043",
+    "event_type": "entry",
+    "ts": "2025-10-18T13:01:58.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Hill"
+  },
+  {
+    "id": 385,
+    "admission_no": "24gce22015",
+    "event_type": "entry",
+    "ts": "2025-10-18T12:44:09.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Johnson"
+  },
+  {
+    "id": 383,
+    "admission_no": "24gce24020",
+    "event_type": "entry",
+    "ts": "2025-10-18T12:30:47.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Karen Lopez"
+  },
+  {
+    "id": 375,
+    "admission_no": "24gce22050",
+    "event_type": "entry",
+    "ts": "2025-10-18T12:26:11.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 376,
+    "admission_no": "24gce23032",
+    "event_type": "entry",
+    "ts": "2025-10-18T10:51:13.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Bob Brown"
+  },
+  {
+    "id": 386,
+    "admission_no": "24gce22033",
+    "event_type": "entry",
+    "ts": "2025-10-18T10:39:06.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Young"
+  },
+  {
+    "id": 387,
+    "admission_no": "24gce22015",
+    "event_type": "exit",
+    "ts": "2025-10-18T09:35:45.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Johnson"
+  },
+  {
+    "id": 378,
+    "admission_no": "24gce24021",
+    "event_type": "entry",
+    "ts": "2025-10-18T09:20:17.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 382,
+    "admission_no": "24gce23032",
+    "event_type": "exit",
+    "ts": "2025-10-18T08:47:18.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Bob Brown"
+  },
+  {
+    "id": 380,
+    "admission_no": "24gce22024",
+    "event_type": "entry",
+    "ts": "2025-10-18T08:14:55.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Davis"
+  },
+  {
+    "id": 371,
+    "admission_no": "24gce25049",
+    "event_type": "entry",
+    "ts": "2025-10-18T07:41:20.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lee"
+  },
+  {
+    "id": 381,
+    "admission_no": "24gce22010",
+    "event_type": "entry",
+    "ts": "2025-10-18T07:28:49.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Carol Thompson"
+  },
+  {
+    "id": 384,
+    "admission_no": "24gce22046",
+    "event_type": "entry",
+    "ts": "2025-10-18T06:54:44.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 372,
+    "admission_no": "24gce24036",
+    "event_type": "entry",
+    "ts": "2025-10-18T06:44:43.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Anderson"
+  },
+  {
+    "id": 373,
+    "admission_no": "24gce23039",
+    "event_type": "entry",
+    "ts": "2025-10-18T06:37:10.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah White"
+  },
+  {
+    "id": 370,
+    "admission_no": "24gce23028",
+    "event_type": "entry",
+    "ts": "2025-10-18T05:57:51.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Thompson"
+  },
+  {
+    "id": 377,
+    "admission_no": "24gce24016",
+    "event_type": "entry",
+    "ts": "2025-10-18T03:48:39.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Taylor"
+  },
+  {
+    "id": 388,
+    "admission_no": "24gce24017",
+    "event_type": "entry",
+    "ts": "2025-10-18T03:46:35.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice Clark"
+  },
+  {
+    "id": 379,
+    "admission_no": "24gce23028",
+    "event_type": "exit",
+    "ts": "2025-10-18T03:21:13.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Thompson"
+  },
+  {
+    "id": 394,
+    "admission_no": "24gce24016",
+    "event_type": "entry",
+    "ts": "2025-10-17T12:37:57.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Taylor"
+  },
+  {
+    "id": 399,
+    "admission_no": "24gce22015",
+    "event_type": "entry",
+    "ts": "2025-10-17T11:16:42.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Johnson"
+  },
+  {
+    "id": 396,
+    "admission_no": "24gce24005",
+    "event_type": "entry",
+    "ts": "2025-10-17T09:16:24.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Xavier Allen"
+  },
+  {
+    "id": 407,
+    "admission_no": "24gce25006",
+    "event_type": "entry",
+    "ts": "2025-10-17T09:01:22.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul King"
+  },
+  {
+    "id": 401,
+    "admission_no": "24gce23032",
+    "event_type": "exit",
+    "ts": "2025-10-17T08:54:34.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Bob Brown"
+  },
+  {
+    "id": 397,
+    "admission_no": "24gce23019",
+    "event_type": "entry",
+    "ts": "2025-10-17T08:26:00.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Henry Allen"
+  },
+  {
+    "id": 403,
+    "admission_no": "24gce22010",
+    "event_type": "entry",
+    "ts": "2025-10-17T08:00:37.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Carol Thompson"
+  },
+  {
+    "id": 390,
+    "admission_no": "24gce24017",
+    "event_type": "entry",
+    "ts": "2025-10-17T07:26:49.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice Clark"
+  },
+  {
+    "id": 393,
+    "admission_no": "24gce24034",
+    "event_type": "entry",
+    "ts": "2025-10-17T07:23:01.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice White"
+  },
+  {
+    "id": 400,
+    "admission_no": "24gce23014",
+    "event_type": "entry",
+    "ts": "2025-10-17T06:59:45.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Hall"
+  },
+  {
+    "id": 404,
+    "admission_no": "24gce25041",
+    "event_type": "entry",
+    "ts": "2025-10-17T06:39:32.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 406,
+    "admission_no": "24gce22050",
+    "event_type": "entry",
+    "ts": "2025-10-17T06:23:56.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 395,
+    "admission_no": "24gce23032",
+    "event_type": "entry",
+    "ts": "2025-10-17T05:22:00.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Bob Brown"
+  },
+  {
+    "id": 391,
+    "admission_no": "24gce24043",
+    "event_type": "entry",
+    "ts": "2025-10-17T05:14:45.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Hill"
+  },
+  {
+    "id": 402,
+    "admission_no": "24gce22007",
+    "event_type": "entry",
+    "ts": "2025-10-17T04:18:56.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Harris"
+  },
+  {
+    "id": 392,
+    "admission_no": "24gce24001",
+    "event_type": "entry",
+    "ts": "2025-10-17T03:57:23.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Rodriguez"
+  },
+  {
+    "id": 405,
+    "admission_no": "24gce24026",
+    "event_type": "entry",
+    "ts": "2025-10-17T02:47:44.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Taylor"
+  },
+  {
+    "id": 398,
+    "admission_no": "24gce24034",
+    "event_type": "exit",
+    "ts": "2025-10-17T02:30:55.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice White"
+  },
+  {
+    "id": 421,
+    "admission_no": "24gce23022",
+    "event_type": "exit",
+    "ts": "2025-10-16T13:28:23.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 412,
+    "admission_no": "24gce22030",
+    "event_type": "entry",
+    "ts": "2025-10-16T12:36:26.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Wilson"
+  },
+  {
+    "id": 419,
+    "admission_no": "24gce24020",
+    "event_type": "entry",
+    "ts": "2025-10-16T12:30:57.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Karen Lopez"
+  },
+  {
+    "id": 411,
+    "admission_no": "24gce23028",
+    "event_type": "entry",
+    "ts": "2025-10-16T11:40:52.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Thompson"
+  },
+  {
+    "id": 423,
+    "admission_no": "24gce25018",
+    "event_type": "entry",
+    "ts": "2025-10-16T11:02:48.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Martinez"
+  },
+  {
+    "id": 414,
+    "admission_no": "24gce24044",
+    "event_type": "entry",
+    "ts": "2025-10-16T09:59:48.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 422,
+    "admission_no": "24gce22015",
+    "event_type": "entry",
+    "ts": "2025-10-16T09:54:30.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Johnson"
+  },
+  {
+    "id": 416,
+    "admission_no": "24gce23022",
+    "event_type": "entry",
+    "ts": "2025-10-16T09:38:30.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 410,
+    "admission_no": "24gce24029",
+    "event_type": "entry",
+    "ts": "2025-10-16T09:12:21.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Wendy King"
+  },
+  {
+    "id": 409,
+    "admission_no": "24gce23003",
+    "event_type": "entry",
+    "ts": "2025-10-16T08:47:08.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Miller"
+  },
+  {
+    "id": 424,
+    "admission_no": "24gce24037",
+    "event_type": "entry",
+    "ts": "2025-10-16T08:39:33.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Hill"
+  },
+  {
+    "id": 428,
+    "admission_no": "24gce22007",
+    "event_type": "entry",
+    "ts": "2025-10-16T08:17:43.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Harris"
+  },
+  {
+    "id": 427,
+    "admission_no": "24gce24017",
+    "event_type": "entry",
+    "ts": "2025-10-16T07:55:53.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice Clark"
+  },
+  {
+    "id": 426,
+    "admission_no": "24gce25011",
+    "event_type": "exit",
+    "ts": "2025-10-16T07:25:06.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Xavier Harris"
+  },
+  {
+    "id": 418,
+    "admission_no": "24gce22002",
+    "event_type": "entry",
+    "ts": "2025-10-16T07:17:52.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Anderson"
+  },
+  {
+    "id": 431,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-10-16T06:47:49.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 429,
+    "admission_no": "24gce24043",
+    "event_type": "entry",
+    "ts": "2025-10-16T06:13:15.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Hill"
+  },
+  {
+    "id": 413,
+    "admission_no": "24gce25011",
+    "event_type": "entry",
+    "ts": "2025-10-16T06:03:22.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Xavier Harris"
+  },
+  {
+    "id": 425,
+    "admission_no": "24gce23032",
+    "event_type": "entry",
+    "ts": "2025-10-16T04:37:54.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Bob Brown"
+  },
+  {
+    "id": 415,
+    "admission_no": "24gce23038",
+    "event_type": "entry",
+    "ts": "2025-10-16T04:02:02.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Scott"
+  },
+  {
+    "id": 420,
+    "admission_no": "24gce22035",
+    "event_type": "entry",
+    "ts": "2025-10-16T03:18:20.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank White"
+  },
+  {
+    "id": 417,
+    "admission_no": "24gce25006",
+    "event_type": "entry",
+    "ts": "2025-10-16T03:16:25.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul King"
+  },
+  {
+    "id": 430,
+    "admission_no": "24gce24031",
+    "event_type": "entry",
+    "ts": "2025-10-16T03:00:53.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Wright"
+  },
+  {
+    "id": 408,
+    "admission_no": "24gce23042",
+    "event_type": "entry",
+    "ts": "2025-10-16T02:38:08.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Wendy Allen"
+  },
+  {
+    "id": 432,
+    "admission_no": "24gce23042",
+    "event_type": "entry",
+    "ts": "2025-10-15T12:53:27.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Wendy Allen"
+  },
+  {
+    "id": 440,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-10-15T12:28:22.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 434,
+    "admission_no": "24gce25004",
+    "event_type": "entry",
+    "ts": "2025-10-15T11:58:06.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Davis"
+  },
+  {
+    "id": 437,
+    "admission_no": "24gce22007",
+    "event_type": "entry",
+    "ts": "2025-10-15T11:47:07.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Harris"
+  },
+  {
+    "id": 444,
+    "admission_no": "24gce24045",
+    "event_type": "exit",
+    "ts": "2025-10-15T10:32:52.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Scott"
+  },
+  {
+    "id": 436,
+    "admission_no": "24gce24045",
+    "event_type": "entry",
+    "ts": "2025-10-15T10:10:00.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Scott"
+  },
+  {
+    "id": 439,
+    "admission_no": "24gce24036",
+    "event_type": "entry",
+    "ts": "2025-10-15T09:07:12.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Anderson"
+  },
+  {
+    "id": 441,
+    "admission_no": "24gce22010",
+    "event_type": "entry",
+    "ts": "2025-10-15T07:36:25.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Carol Thompson"
+  },
+  {
+    "id": 435,
+    "admission_no": "24gce24043",
+    "event_type": "entry",
+    "ts": "2025-10-15T06:51:51.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Hill"
+  },
+  {
+    "id": 445,
+    "admission_no": "24gce24017",
+    "event_type": "entry",
+    "ts": "2025-10-15T06:31:40.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice Clark"
+  },
+  {
+    "id": 442,
+    "admission_no": "24gce24037",
+    "event_type": "entry",
+    "ts": "2025-10-15T06:31:24.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Hill"
+  },
+  {
+    "id": 433,
+    "admission_no": "24gce24020",
+    "event_type": "entry",
+    "ts": "2025-10-15T06:22:15.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Karen Lopez"
+  },
+  {
+    "id": 446,
+    "admission_no": "24gce22002",
+    "event_type": "entry",
+    "ts": "2025-10-15T03:29:14.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Anderson"
+  },
+  {
+    "id": 438,
+    "admission_no": "24gce24020",
+    "event_type": "exit",
+    "ts": "2025-10-15T03:24:47.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Karen Lopez"
+  },
+  {
+    "id": 443,
+    "admission_no": "24gce24021",
+    "event_type": "entry",
+    "ts": "2025-10-15T03:19:04.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 454,
+    "admission_no": "24gce24021",
+    "event_type": "exit",
+    "ts": "2025-10-14T13:06:27.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 450,
+    "admission_no": "24gce24034",
+    "event_type": "entry",
+    "ts": "2025-10-14T12:53:43.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice White"
+  },
+  {
+    "id": 451,
+    "admission_no": "24gce23009",
+    "event_type": "entry",
+    "ts": "2025-10-14T12:38:15.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Walker"
+  },
+  {
+    "id": 448,
+    "admission_no": "24gce24021",
+    "event_type": "entry",
+    "ts": "2025-10-14T11:51:27.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 459,
+    "admission_no": "24gce24017",
+    "event_type": "entry",
+    "ts": "2025-10-14T11:33:25.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice Clark"
+  },
+  {
+    "id": 453,
+    "admission_no": "24gce23003",
+    "event_type": "entry",
+    "ts": "2025-10-14T10:59:46.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Miller"
+  },
+  {
+    "id": 455,
+    "admission_no": "24gce23032",
+    "event_type": "entry",
+    "ts": "2025-10-14T10:21:13.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Bob Brown"
+  },
+  {
+    "id": 457,
+    "admission_no": "24gce24037",
+    "event_type": "entry",
+    "ts": "2025-10-14T10:07:43.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Hill"
+  },
+  {
+    "id": 466,
+    "admission_no": "24gce24001",
+    "event_type": "entry",
+    "ts": "2025-10-14T09:10:26.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Rodriguez"
+  },
+  {
+    "id": 469,
+    "admission_no": "24gce23028",
+    "event_type": "entry",
+    "ts": "2025-10-14T08:44:49.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Thompson"
+  },
+  {
+    "id": 447,
+    "admission_no": "24gce22047",
+    "event_type": "entry",
+    "ts": "2025-10-14T08:27:03.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Johnson"
+  },
+  {
+    "id": 449,
+    "admission_no": "24gce22033",
+    "event_type": "entry",
+    "ts": "2025-10-14T07:42:20.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Young"
+  },
+  {
+    "id": 467,
+    "admission_no": "24gce22024",
+    "event_type": "entry",
+    "ts": "2025-10-14T07:28:46.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Davis"
+  },
+  {
+    "id": 463,
+    "admission_no": "24gce24045",
+    "event_type": "entry",
+    "ts": "2025-10-14T06:40:51.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Scott"
+  },
+  {
+    "id": 464,
+    "admission_no": "24gce24045",
+    "event_type": "exit",
+    "ts": "2025-10-14T06:40:31.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Scott"
+  },
+  {
+    "id": 460,
+    "admission_no": "24gce22046",
+    "event_type": "entry",
+    "ts": "2025-10-14T06:23:01.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 461,
+    "admission_no": "24gce23003",
+    "event_type": "exit",
+    "ts": "2025-10-14T05:50:26.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Miller"
+  },
+  {
+    "id": 468,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-10-14T04:19:02.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 458,
+    "admission_no": "24gce22033",
+    "event_type": "exit",
+    "ts": "2025-10-14T04:08:17.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Young"
+  },
+  {
+    "id": 452,
+    "admission_no": "24gce24040",
+    "event_type": "entry",
+    "ts": "2025-10-14T03:52:13.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Davis"
+  },
+  {
+    "id": 456,
+    "admission_no": "24gce24040",
+    "event_type": "exit",
+    "ts": "2025-10-14T03:30:46.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Davis"
+  },
+  {
+    "id": 462,
+    "admission_no": "24gce23022",
+    "event_type": "entry",
+    "ts": "2025-10-14T02:55:04.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 465,
+    "admission_no": "24gce23014",
+    "event_type": "entry",
+    "ts": "2025-10-14T02:42:42.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Hall"
+  },
+  {
+    "id": 480,
+    "admission_no": "24gce24045",
+    "event_type": "entry",
+    "ts": "2025-10-13T12:54:03.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Scott"
+  },
+  {
+    "id": 475,
+    "admission_no": "24gce23014",
+    "event_type": "entry",
+    "ts": "2025-10-13T12:44:15.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Hall"
+  },
+  {
+    "id": 473,
+    "admission_no": "24gce22035",
+    "event_type": "entry",
+    "ts": "2025-10-13T12:43:16.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank White"
+  },
+  {
+    "id": 476,
+    "admission_no": "24gce22015",
+    "event_type": "entry",
+    "ts": "2025-10-13T11:29:41.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Johnson"
+  },
+  {
+    "id": 477,
+    "admission_no": "24gce24016",
+    "event_type": "entry",
+    "ts": "2025-10-13T10:20:35.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Taylor"
+  },
+  {
+    "id": 482,
+    "admission_no": "24gce24013",
+    "event_type": "entry",
+    "ts": "2025-10-13T07:56:33.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Olivia Scott"
+  },
+  {
+    "id": 471,
+    "admission_no": "24gce25049",
+    "event_type": "entry",
+    "ts": "2025-10-13T07:21:11.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lee"
+  },
+  {
+    "id": 478,
+    "admission_no": "24gce24036",
+    "event_type": "entry",
+    "ts": "2025-10-13T06:30:00.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Anderson"
+  },
+  {
+    "id": 474,
+    "admission_no": "24gce24037",
+    "event_type": "entry",
+    "ts": "2025-10-13T06:22:06.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Hill"
+  },
+  {
+    "id": 472,
+    "admission_no": "24gce22050",
+    "event_type": "entry",
+    "ts": "2025-10-13T04:46:08.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 479,
+    "admission_no": "24gce25023",
+    "event_type": "entry",
+    "ts": "2025-10-13T04:24:12.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Taylor"
+  },
+  {
+    "id": 470,
+    "admission_no": "24gce24017",
+    "event_type": "entry",
+    "ts": "2025-10-13T04:09:54.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice Clark"
+  },
+  {
+    "id": 484,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-10-13T03:09:46.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 481,
+    "admission_no": "24gce24016",
+    "event_type": "exit",
+    "ts": "2025-10-13T03:05:06.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Taylor"
+  },
+  {
+    "id": 483,
+    "admission_no": "24gce24029",
+    "event_type": "entry",
+    "ts": "2025-10-13T02:41:34.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Wendy King"
+  },
+  {
+    "id": 486,
+    "admission_no": "24gce24031",
+    "event_type": "entry",
+    "ts": "2025-10-12T13:19:09.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Wright"
+  },
+  {
+    "id": 498,
+    "admission_no": "24gce22048",
+    "event_type": "entry",
+    "ts": "2025-10-12T13:08:06.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Brown"
+  },
+  {
+    "id": 500,
+    "admission_no": "24gce24016",
+    "event_type": "exit",
+    "ts": "2025-10-12T13:03:18.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Taylor"
+  },
+  {
+    "id": 496,
+    "admission_no": "24gce22015",
+    "event_type": "exit",
+    "ts": "2025-10-12T12:22:26.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Johnson"
+  },
+  {
+    "id": 490,
+    "admission_no": "24gce25012",
+    "event_type": "entry",
+    "ts": "2025-10-12T12:08:39.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 488,
+    "admission_no": "24gce22047",
+    "event_type": "entry",
+    "ts": "2025-10-12T11:27:12.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Johnson"
+  },
+  {
+    "id": 499,
+    "admission_no": "24gce24044",
+    "event_type": "entry",
+    "ts": "2025-10-12T10:02:10.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 494,
+    "admission_no": "24gce25049",
+    "event_type": "entry",
+    "ts": "2025-10-12T08:59:46.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lee"
+  },
+  {
+    "id": 491,
+    "admission_no": "24gce23025",
+    "event_type": "entry",
+    "ts": "2025-10-12T08:22:47.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Thompson"
+  },
+  {
+    "id": 501,
+    "admission_no": "24gce25049",
+    "event_type": "exit",
+    "ts": "2025-10-12T08:22:21.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lee"
+  },
+  {
+    "id": 489,
+    "admission_no": "24gce22015",
+    "event_type": "entry",
+    "ts": "2025-10-12T04:58:12.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Johnson"
+  },
+  {
+    "id": 485,
+    "admission_no": "24gce24034",
+    "event_type": "entry",
+    "ts": "2025-10-12T04:23:21.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice White"
+  },
+  {
+    "id": 492,
+    "admission_no": "24gce23003",
+    "event_type": "entry",
+    "ts": "2025-10-12T03:53:05.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Miller"
+  },
+  {
+    "id": 497,
+    "admission_no": "24gce24001",
+    "event_type": "entry",
+    "ts": "2025-10-12T03:32:11.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Rodriguez"
+  },
+  {
+    "id": 495,
+    "admission_no": "24gce24016",
+    "event_type": "entry",
+    "ts": "2025-10-12T03:31:48.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Taylor"
+  },
+  {
+    "id": 493,
+    "admission_no": "24gce22007",
+    "event_type": "entry",
+    "ts": "2025-10-12T03:05:20.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Harris"
+  },
+  {
+    "id": 502,
+    "admission_no": "24gce25023",
+    "event_type": "entry",
+    "ts": "2025-10-12T02:54:44.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Taylor"
+  },
+  {
+    "id": 487,
+    "admission_no": "24gce24037",
+    "event_type": "entry",
+    "ts": "2025-10-12T02:35:27.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Mia Hill"
+  },
+  {
+    "id": 517,
+    "admission_no": "24gce23022",
+    "event_type": "entry",
+    "ts": "2025-10-11T12:30:06.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 510,
+    "admission_no": "24gce24043",
+    "event_type": "entry",
+    "ts": "2025-10-11T11:42:52.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Hill"
+  },
+  {
+    "id": 521,
+    "admission_no": "24gce22035",
+    "event_type": "entry",
+    "ts": "2025-10-11T11:39:46.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank White"
+  },
+  {
+    "id": 519,
+    "admission_no": "24gce22047",
+    "event_type": "entry",
+    "ts": "2025-10-11T11:39:33.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Johnson"
+  },
+  {
+    "id": 514,
+    "admission_no": "24gce24040",
+    "event_type": "entry",
+    "ts": "2025-10-11T11:20:44.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Davis"
+  },
+  {
+    "id": 506,
+    "admission_no": "24gce23019",
+    "event_type": "entry",
+    "ts": "2025-10-11T10:52:17.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Henry Allen"
+  },
+  {
+    "id": 520,
+    "admission_no": "24gce23032",
+    "event_type": "entry",
+    "ts": "2025-10-11T10:49:36.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Bob Brown"
+  },
+  {
+    "id": 504,
+    "admission_no": "24gce24043",
+    "event_type": "entry",
+    "ts": "2025-10-11T09:57:13.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Hill"
+  },
+  {
+    "id": 518,
+    "admission_no": "24gce22033",
+    "event_type": "entry",
+    "ts": "2025-10-11T09:35:32.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Young"
+  },
+  {
+    "id": 507,
+    "admission_no": "24gce24043",
+    "event_type": "exit",
+    "ts": "2025-10-11T08:28:23.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Hill"
+  },
+  {
+    "id": 503,
+    "admission_no": "24gce23009",
+    "event_type": "entry",
+    "ts": "2025-10-11T07:53:52.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Walker"
+  },
+  {
+    "id": 525,
+    "admission_no": "24gce22024",
+    "event_type": "exit",
+    "ts": "2025-10-11T07:51:34.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Davis"
+  },
+  {
+    "id": 512,
+    "admission_no": "24gce24034",
+    "event_type": "entry",
+    "ts": "2025-10-11T07:45:56.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice White"
+  },
+  {
+    "id": 524,
+    "admission_no": "24gce24013",
+    "event_type": "entry",
+    "ts": "2025-10-11T06:33:16.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Olivia Scott"
+  },
+  {
+    "id": 511,
+    "admission_no": "24gce23003",
+    "event_type": "entry",
+    "ts": "2025-10-11T05:55:12.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Miller"
+  },
+  {
+    "id": 516,
+    "admission_no": "24gce25023",
+    "event_type": "exit",
+    "ts": "2025-10-11T05:21:40.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Taylor"
+  },
+  {
+    "id": 515,
+    "admission_no": "24gce24016",
+    "event_type": "entry",
+    "ts": "2025-10-11T04:33:52.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Taylor"
+  },
+  {
+    "id": 522,
+    "admission_no": "24gce22047",
+    "event_type": "exit",
+    "ts": "2025-10-11T04:08:39.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Johnson"
+  },
+  {
+    "id": 508,
+    "admission_no": "24gce24045",
+    "event_type": "entry",
+    "ts": "2025-10-11T04:06:39.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Scott"
+  },
+  {
+    "id": 523,
+    "admission_no": "24gce23019",
+    "event_type": "exit",
+    "ts": "2025-10-11T03:39:47.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Henry Allen"
+  },
+  {
+    "id": 505,
+    "admission_no": "24gce22015",
+    "event_type": "entry",
+    "ts": "2025-10-11T03:36:54.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Johnson"
+  },
+  {
+    "id": 513,
+    "admission_no": "24gce22024",
+    "event_type": "entry",
+    "ts": "2025-10-11T03:21:53.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Davis"
+  },
+  {
+    "id": 509,
+    "admission_no": "24gce25023",
+    "event_type": "entry",
+    "ts": "2025-10-11T02:32:39.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Taylor"
+  },
+  {
+    "id": 539,
+    "admission_no": "24gce23003",
+    "event_type": "exit",
+    "ts": "2025-10-10T12:48:47.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Miller"
+  },
+  {
+    "id": 526,
+    "admission_no": "24gce25041",
+    "event_type": "entry",
+    "ts": "2025-10-10T12:13:49.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 527,
+    "admission_no": "24gce22015",
+    "event_type": "entry",
+    "ts": "2025-10-10T12:10:49.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Johnson"
+  },
+  {
+    "id": 531,
+    "admission_no": "24gce24013",
+    "event_type": "entry",
+    "ts": "2025-10-10T11:56:35.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Olivia Scott"
+  },
+  {
+    "id": 528,
+    "admission_no": "24gce25006",
+    "event_type": "entry",
+    "ts": "2025-10-10T11:36:07.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul King"
+  },
+  {
+    "id": 533,
+    "admission_no": "24gce23003",
+    "event_type": "entry",
+    "ts": "2025-10-10T11:15:32.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Miller"
+  },
+  {
+    "id": 535,
+    "admission_no": "24gce24017",
+    "event_type": "entry",
+    "ts": "2025-10-10T09:29:11.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice Clark"
+  },
+  {
+    "id": 540,
+    "admission_no": "24gce22035",
+    "event_type": "entry",
+    "ts": "2025-10-10T08:46:59.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank White"
+  },
+  {
+    "id": 534,
+    "admission_no": "24gce22002",
+    "event_type": "entry",
+    "ts": "2025-10-10T07:59:20.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Anderson"
+  },
+  {
+    "id": 536,
+    "admission_no": "24gce24043",
+    "event_type": "exit",
+    "ts": "2025-10-10T07:42:09.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Hill"
+  },
+  {
+    "id": 541,
+    "admission_no": "24gce24034",
+    "event_type": "entry",
+    "ts": "2025-10-10T07:26:30.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice White"
+  },
+  {
+    "id": 542,
+    "admission_no": "24gce22002",
+    "event_type": "exit",
+    "ts": "2025-10-10T06:18:34.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Anderson"
+  },
+  {
+    "id": 537,
+    "admission_no": "24gce22033",
+    "event_type": "entry",
+    "ts": "2025-10-10T04:42:15.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Young"
+  },
+  {
+    "id": 538,
+    "admission_no": "24gce22008",
+    "event_type": "entry",
+    "ts": "2025-10-10T04:36:43.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Uma Anderson"
+  },
+  {
+    "id": 529,
+    "admission_no": "24gce25041",
+    "event_type": "exit",
+    "ts": "2025-10-10T03:45:00.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Lee"
+  },
+  {
+    "id": 532,
+    "admission_no": "24gce23039",
+    "event_type": "entry",
+    "ts": "2025-10-10T02:56:00.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah White"
+  },
+  {
+    "id": 530,
+    "admission_no": "24gce24043",
+    "event_type": "entry",
+    "ts": "2025-10-10T02:45:01.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Grace Hill"
+  },
+  {
+    "id": 555,
+    "admission_no": "24gce25049",
+    "event_type": "entry",
+    "ts": "2025-10-09T12:58:10.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lee"
+  },
+  {
+    "id": 552,
+    "admission_no": "24gce24027",
+    "event_type": "exit",
+    "ts": "2025-10-09T11:51:53.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 549,
+    "admission_no": "24gce25006",
+    "event_type": "entry",
+    "ts": "2025-10-09T11:08:36.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul King"
+  },
+  {
+    "id": 556,
+    "admission_no": "24gce25011",
+    "event_type": "entry",
+    "ts": "2025-10-09T11:01:31.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Xavier Harris"
+  },
+  {
+    "id": 545,
+    "admission_no": "24gce22024",
+    "event_type": "entry",
+    "ts": "2025-10-09T08:51:41.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Davis"
+  },
+  {
+    "id": 551,
+    "admission_no": "24gce23038",
+    "event_type": "entry",
+    "ts": "2025-10-09T08:49:07.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Frank Scott"
+  },
+  {
+    "id": 548,
+    "admission_no": "24gce22002",
+    "event_type": "entry",
+    "ts": "2025-10-09T08:17:00.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Anderson"
+  },
+  {
+    "id": 547,
+    "admission_no": "24gce24017",
+    "event_type": "entry",
+    "ts": "2025-10-09T08:01:43.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Alice Clark"
+  },
+  {
+    "id": 546,
+    "admission_no": "24gce23003",
+    "event_type": "entry",
+    "ts": "2025-10-09T07:23:19.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Miller"
+  },
+  {
+    "id": 550,
+    "admission_no": "24gce24027",
+    "event_type": "entry",
+    "ts": "2025-10-09T06:16:54.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul White"
+  },
+  {
+    "id": 544,
+    "admission_no": "24gce23042",
+    "event_type": "entry",
+    "ts": "2025-10-09T06:10:37.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Wendy Allen"
+  },
+  {
+    "id": 553,
+    "admission_no": "24gce22046",
+    "event_type": "exit",
+    "ts": "2025-10-09T05:22:12.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 557,
+    "admission_no": "24gce24001",
+    "event_type": "entry",
+    "ts": "2025-10-09T04:39:11.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Rodriguez"
+  },
+  {
+    "id": 543,
+    "admission_no": "24gce22046",
+    "event_type": "entry",
+    "ts": "2025-10-09T02:39:47.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lopez"
+  },
+  {
+    "id": 554,
+    "admission_no": "24gce23014",
+    "event_type": "entry",
+    "ts": "2025-10-09T02:33:09.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Zack Hall"
+  },
+  {
+    "id": 564,
+    "admission_no": "24gce24001",
+    "event_type": "entry",
+    "ts": "2025-10-08T12:57:27.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Paul Rodriguez"
+  },
+  {
+    "id": 572,
+    "admission_no": "24gce25012",
+    "event_type": "entry",
+    "ts": "2025-10-08T12:56:57.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 571,
+    "admission_no": "24gce24021",
+    "event_type": "entry",
+    "ts": "2025-10-08T12:45:23.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Noah Wright"
+  },
+  {
+    "id": 560,
+    "admission_no": "24gce22047",
+    "event_type": "entry",
+    "ts": "2025-10-08T12:41:17.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Johnson"
+  },
+  {
+    "id": 567,
+    "admission_no": "24gce22024",
+    "event_type": "entry",
+    "ts": "2025-10-08T12:15:46.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Davis"
+  },
+  {
+    "id": 563,
+    "admission_no": "24gce22010",
+    "event_type": "entry",
+    "ts": "2025-10-08T11:44:10.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Carol Thompson"
+  },
+  {
+    "id": 559,
+    "admission_no": "24gce23028",
+    "event_type": "entry",
+    "ts": "2025-10-08T11:05:13.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Leo Thompson"
+  },
+  {
+    "id": 562,
+    "admission_no": "24gce25004",
+    "event_type": "entry",
+    "ts": "2025-10-08T10:37:20.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Davis"
+  },
+  {
+    "id": 568,
+    "admission_no": "24gce24040",
+    "event_type": "entry",
+    "ts": "2025-10-08T09:07:49.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Tina Davis"
+  },
+  {
+    "id": 573,
+    "admission_no": "24gce25012",
+    "event_type": "exit",
+    "ts": "2025-10-08T08:42:44.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Emma King"
+  },
+  {
+    "id": 558,
+    "admission_no": "24gce24005",
+    "event_type": "entry",
+    "ts": "2025-10-08T08:23:16.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Xavier Allen"
+  },
+  {
+    "id": 565,
+    "admission_no": "24gce25049",
+    "event_type": "entry",
+    "ts": "2025-10-08T06:48:35.317Z",
+    "device_id": "esp32-device-001",
+    "name": "David Lee"
+  },
+  {
+    "id": 569,
+    "admission_no": "24gce24026",
+    "event_type": "entry",
+    "ts": "2025-10-08T06:30:28.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Victor Taylor"
+  },
+  {
+    "id": 566,
+    "admission_no": "24gce22030",
+    "event_type": "entry",
+    "ts": "2025-10-08T05:01:31.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Wilson"
+  },
+  {
+    "id": 570,
+    "admission_no": "24gce22030",
+    "event_type": "exit",
+    "ts": "2025-10-08T04:22:40.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Sam Wilson"
+  },
+  {
+    "id": 561,
+    "admission_no": "24gce24013",
+    "event_type": "entry",
+    "ts": "2025-10-08T03:39:00.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Olivia Scott"
+  },
+  {
+    "id": 574,
+    "admission_no": "24gce24036",
+    "event_type": "entry",
+    "ts": "2025-10-08T02:41:17.317Z",
+    "device_id": "esp32-device-001",
+    "name": "Quinn Anderson"
+  }
+]

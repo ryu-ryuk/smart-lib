@@ -1,0 +1,352 @@
+[
+  {
+    "admission_no": "24gce24001",
+    "name": "Paul Rodriguez",
+    "branch": "Arts",
+    "year": 2024,
+    "created_at": "2025-06-24T06:37:33.315Z"
+  },
+  {
+    "admission_no": "24gce22002",
+    "name": "Tina Anderson",
+    "branch": "Medicine",
+    "year": 2022,
+    "created_at": "2025-06-16T02:41:19.315Z"
+  },
+  {
+    "admission_no": "24gce23003",
+    "name": "David Miller",
+    "branch": "Computer Science",
+    "year": 2023,
+    "created_at": "2025-07-27T03:05:51.315Z"
+  },
+  {
+    "admission_no": "24gce25004",
+    "name": "Quinn Davis",
+    "branch": "Engineering",
+    "year": 2025,
+    "created_at": "2025-07-01T02:58:41.315Z"
+  },
+  {
+    "admission_no": "24gce24005",
+    "name": "Xavier Allen",
+    "branch": "Computer Science",
+    "year": 2024,
+    "created_at": "2025-01-27T04:56:13.315Z"
+  },
+  {
+    "admission_no": "24gce25006",
+    "name": "Paul King",
+    "branch": "Science",
+    "year": 2025,
+    "created_at": "2025-01-02T06:40:30.315Z"
+  },
+  {
+    "admission_no": "24gce22007",
+    "name": "Uma Harris",
+    "branch": "Arts",
+    "year": 2022,
+    "created_at": "2025-01-10T11:24:30.315Z"
+  },
+  {
+    "admission_no": "24gce22008",
+    "name": "Uma Anderson",
+    "branch": "Business",
+    "year": 2022,
+    "created_at": "2025-06-28T08:09:46.315Z"
+  },
+  {
+    "admission_no": "24gce23009",
+    "name": "Zack Walker",
+    "branch": "Engineering",
+    "year": 2023,
+    "created_at": "2025-01-22T10:16:07.315Z"
+  },
+  {
+    "admission_no": "24gce22010",
+    "name": "Carol Thompson",
+    "branch": "Law",
+    "year": 2022,
+    "created_at": "2025-09-05T03:14:04.315Z"
+  },
+  {
+    "admission_no": "24gce25011",
+    "name": "Xavier Harris",
+    "branch": "Science",
+    "year": 2025,
+    "created_at": "2025-05-04T02:46:18.315Z"
+  },
+  {
+    "admission_no": "24gce25012",
+    "name": "Emma King",
+    "branch": "Business",
+    "year": 2025,
+    "created_at": "2025-01-18T08:47:31.315Z"
+  },
+  {
+    "admission_no": "24gce24013",
+    "name": "Olivia Scott",
+    "branch": "Business",
+    "year": 2024,
+    "created_at": "2025-03-25T06:25:04.315Z"
+  },
+  {
+    "admission_no": "24gce23014",
+    "name": "Zack Hall",
+    "branch": "Law",
+    "year": 2023,
+    "created_at": "2025-09-03T06:20:10.315Z"
+  },
+  {
+    "admission_no": "24gce22015",
+    "name": "Victor Johnson",
+    "branch": "Computer Science",
+    "year": 2022,
+    "created_at": "2024-12-15T11:32:36.315Z"
+  },
+  {
+    "admission_no": "24gce24016",
+    "name": "Uma Taylor",
+    "branch": "Science",
+    "year": 2024,
+    "created_at": "2025-03-10T07:15:13.315Z"
+  },
+  {
+    "admission_no": "24gce24017",
+    "name": "Alice Clark",
+    "branch": "Law",
+    "year": 2024,
+    "created_at": "2024-12-19T11:33:24.315Z"
+  },
+  {
+    "admission_no": "24gce25018",
+    "name": "Paul Martinez",
+    "branch": "Medicine",
+    "year": 2025,
+    "created_at": "2025-01-16T07:02:12.315Z"
+  },
+  {
+    "admission_no": "24gce23019",
+    "name": "Henry Allen",
+    "branch": "Computer Science",
+    "year": 2023,
+    "created_at": "2025-07-24T04:15:24.315Z"
+  },
+  {
+    "admission_no": "24gce24020",
+    "name": "Karen Lopez",
+    "branch": "Computer Science",
+    "year": 2024,
+    "created_at": "2025-05-11T11:13:16.315Z"
+  },
+  {
+    "admission_no": "24gce24021",
+    "name": "Noah Wright",
+    "branch": "Computer Science",
+    "year": 2024,
+    "created_at": "2024-11-24T08:52:01.315Z"
+  },
+  {
+    "admission_no": "24gce23022",
+    "name": "Emma King",
+    "branch": "Science",
+    "year": 2023,
+    "created_at": "2025-02-10T06:11:09.315Z"
+  },
+  {
+    "admission_no": "24gce25023",
+    "name": "Zack Taylor",
+    "branch": "Medicine",
+    "year": 2025,
+    "created_at": "2025-03-24T11:33:46.315Z"
+  },
+  {
+    "admission_no": "24gce22024",
+    "name": "Sam Davis",
+    "branch": "Law",
+    "year": 2022,
+    "created_at": "2025-03-08T08:31:47.315Z"
+  },
+  {
+    "admission_no": "24gce23025",
+    "name": "Grace Thompson",
+    "branch": "Business",
+    "year": 2023,
+    "created_at": "2025-01-11T08:28:54.315Z"
+  },
+  {
+    "admission_no": "24gce24026",
+    "name": "Victor Taylor",
+    "branch": "Computer Science",
+    "year": 2024,
+    "created_at": "2025-06-27T04:15:26.315Z"
+  },
+  {
+    "admission_no": "24gce24027",
+    "name": "Paul White",
+    "branch": "Science",
+    "year": 2024,
+    "created_at": "2025-08-07T08:32:43.315Z"
+  },
+  {
+    "admission_no": "24gce23028",
+    "name": "Leo Thompson",
+    "branch": "Business",
+    "year": 2023,
+    "created_at": "2025-08-24T03:28:37.315Z"
+  },
+  {
+    "admission_no": "24gce24029",
+    "name": "Wendy King",
+    "branch": "Law",
+    "year": 2024,
+    "created_at": "2024-11-25T13:18:17.315Z"
+  },
+  {
+    "admission_no": "24gce22030",
+    "name": "Sam Wilson",
+    "branch": "Computer Science",
+    "year": 2022,
+    "created_at": "2025-10-05T10:03:25.315Z"
+  },
+  {
+    "admission_no": "24gce24031",
+    "name": "Victor Wright",
+    "branch": "Law",
+    "year": 2024,
+    "created_at": "2025-01-12T11:20:15.315Z"
+  },
+  {
+    "admission_no": "24gce23032",
+    "name": "Bob Brown",
+    "branch": "Arts",
+    "year": 2023,
+    "created_at": "2025-03-26T04:19:14.315Z"
+  },
+  {
+    "admission_no": "24gce22033",
+    "name": "Leo Young",
+    "branch": "Business",
+    "year": 2022,
+    "created_at": "2025-02-15T06:51:06.315Z"
+  },
+  {
+    "admission_no": "24gce24034",
+    "name": "Alice White",
+    "branch": "Law",
+    "year": 2024,
+    "created_at": "2025-04-21T12:01:16.315Z"
+  },
+  {
+    "admission_no": "24gce22035",
+    "name": "Frank White",
+    "branch": "Business",
+    "year": 2022,
+    "created_at": "2025-02-20T04:11:38.315Z"
+  },
+  {
+    "admission_no": "24gce24036",
+    "name": "Quinn Anderson",
+    "branch": "Science",
+    "year": 2024,
+    "created_at": "2025-07-03T03:12:52.315Z"
+  },
+  {
+    "admission_no": "24gce24037",
+    "name": "Mia Hill",
+    "branch": "Law",
+    "year": 2024,
+    "created_at": "2025-03-31T10:40:13.315Z"
+  },
+  {
+    "admission_no": "24gce23038",
+    "name": "Frank Scott",
+    "branch": "Science",
+    "year": 2023,
+    "created_at": "2025-02-16T09:47:26.315Z"
+  },
+  {
+    "admission_no": "24gce23039",
+    "name": "Noah White",
+    "branch": "Arts",
+    "year": 2023,
+    "created_at": "2025-05-16T08:30:02.315Z"
+  },
+  {
+    "admission_no": "24gce24040",
+    "name": "Tina Davis",
+    "branch": "Law",
+    "year": 2024,
+    "created_at": "2025-05-09T07:27:23.315Z"
+  },
+  {
+    "admission_no": "24gce25041",
+    "name": "Frank Lee",
+    "branch": "Arts",
+    "year": 2025,
+    "created_at": "2025-06-14T10:22:43.315Z"
+  },
+  {
+    "admission_no": "24gce23042",
+    "name": "Wendy Allen",
+    "branch": "Arts",
+    "year": 2023,
+    "created_at": "2025-09-26T11:07:38.315Z"
+  },
+  {
+    "admission_no": "24gce24043",
+    "name": "Grace Hill",
+    "branch": "Engineering",
+    "year": 2024,
+    "created_at": "2025-02-14T03:36:03.315Z"
+  },
+  {
+    "admission_no": "24gce24044",
+    "name": "Emma King",
+    "branch": "Medicine",
+    "year": 2024,
+    "created_at": "2025-02-13T07:47:14.315Z"
+  },
+  {
+    "admission_no": "24gce24045",
+    "name": "Paul Scott",
+    "branch": "Engineering",
+    "year": 2024,
+    "created_at": "2025-01-16T11:46:54.315Z"
+  },
+  {
+    "admission_no": "24gce22046",
+    "name": "David Lopez",
+    "branch": "Science",
+    "year": 2022,
+    "created_at": "2025-05-25T08:29:03.315Z"
+  },
+  {
+    "admission_no": "24gce22047",
+    "name": "Sam Johnson",
+    "branch": "Arts",
+    "year": 2022,
+    "created_at": "2025-05-31T08:29:43.315Z"
+  },
+  {
+    "admission_no": "24gce22048",
+    "name": "Mia Brown",
+    "branch": "Business",
+    "year": 2022,
+    "created_at": "2025-01-27T08:00:23.315Z"
+  },
+  {
+    "admission_no": "24gce25049",
+    "name": "David Lee",
+    "branch": "Engineering",
+    "year": 2025,
+    "created_at": "2025-02-10T10:39:36.315Z"
+  },
+  {
+    "admission_no": "24gce22050",
+    "name": "David Lopez",
+    "branch": "Law",
+    "year": 2022,
+    "created_at": "2025-03-13T11:54:57.315Z"
+  }
+]

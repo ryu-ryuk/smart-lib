@@ -1,0 +1,9 @@
+services:
+  postgres:
+    volumes:
+      - postgres_data_dev:/var/lib/postgresql/data
+      - ./migrations/attendance.sql:/docker-entrypoint-initdb.d/01-attendance.sql
+      - ./migrations/02-grant-permissions.sql:/docker-entrypoint-initdb.d/02-grant-permissions.sql
+      - ./migrations/03-add-rfid-uid.sql:/docker-entrypoint-initdb.d/03-add-rfid-uid.sql
+      - ./migrations/04-create-unassigned-rfid.sql:/docker-entrypoint-initdb.d/04-create-unassigned-rfid.sql
+
