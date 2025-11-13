@@ -1,0 +1,142 @@
+/* Extracted from esp32/main/main.c */
+static bool json_extract_string(const char *json, const char *key, char *out, size_t out_len) {
+    char pattern[32];
+    snprintf(pattern, sizeof(pattern), "\"%s\":\"", key);
+    const char *start = strstr(json, pattern);
+    if (!start) return false;
+    start += strlen(pattern);
+    const char *end = strchr(start, '"');
+    if (!end) return false;
+    size_t len = end - start;
+    if (len >= out_len) len = out_len - 1;
+    memcpy(out, start, len);
+    out[len] = '\0';
+    return true;
+}
+
+static esp_err_t fetch_student_info(const char *uid, rfid_cache_entry_t *entry) {
+    char url[256];
+    snprintf(url, sizeof(url), ADMIN_API_URL "/students/by-rfid/%s", uid);
+    esp_http_client_config_t cfg = {
+        .url = url,
+        .method = HTTP_METHOD_GET,
+        .timeout_ms = 3000,
+    };
+    esp_http_client_handle_t client = esp_http_client_init(&cfg);
+    if (!client) {
+        return ESP_FAIL;
+    }
+
+    esp_err_t err = esp_http_client_perform(client);
+    if (err != ESP_OK) {
+        esp_http_client_cleanup(client);
+        return err;
+    }
+
+    int status = esp_http_client_get_status_code(client);
+    if (status != 200) {
+        esp_http_client_cleanup(client);
+        return ESP_FAIL;
+    }
+
+    char response[256];
+    int read_len = esp_http_client_read_response(client, response, sizeof(response) - 1);
+    if (read_len <= 0) {
+        esp_http_client_cleanup(client);
+        return ESP_FAIL;
+    }
+    response[read_len] = '\0';
+
+    char name[64];
+    if (!json_extract_string(response, "name", name, sizeof(name))) {
+        snprintf(name, sizeof(name), "%s", uid);
+    }
+    strncpy(entry->name, name, sizeof(entry->name) - 1);
+    entry->name[sizeof(entry->name) - 1] = '\0';
+
+    char next_event[6];
+    if (json_extract_string(response, "next_event_type", next_event, sizeof(next_event))) {
+        strncpy(entry->next_event, next_event, sizeof(entry->next_event) - 1);
+        entry->next_event[sizeof(entry->next_event) - 1] = '\0';
+    } else {
+        strcpy(entry->next_event, "entry");
+    }
+
+    esp_http_client_cleanup(client);
+    return ESP_OK;
+}
+
+static void get_rfc3339_timestamp(char* buffer, size_t len) {
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    struct tm timeinfo;
+    localtime_r(&tv.tv_sec, &timeinfo);
+
+    snprintf(buffer, len, "%04d-%02d-%02dT%02d:%02d:%02d.%03" PRId32 "Z",
+             timeinfo.tm_year + 1900,
+             timeinfo.tm_mon + 1,
+             timeinfo.tm_mday,
+             timeinfo.tm_hour,
+             timeinfo.tm_min,
+             timeinfo.tm_sec,
+             (int32_t)(tv.tv_usec / 1000));
+}
+
+static void generate_uuid(char* uuid) {
+    uint32_t random_values[4];
+    for (int i = 0; i < 4; i++) {
+        random_values[i] = esp_random();
+    }
+    snprintf(uuid, 37, "%08" PRIx32 "-%04" PRIx32 "-%04" PRIx32 "-%04" PRIx32 "-%08" PRIx32 "%04" PRIx32,
+             random_values[0],
+             (random_values[1] >> 16) & 0xFFFF,
+             random_values[1] & 0xFFFF,
+             (random_values[2] >> 16) & 0xFFFF,
+             random_values[2] & 0xFFFF,
+             random_values[3] & 0xFFFF);
+}
+
+static void send_event_to_gateway(const char* rfid_uid) {
+    int64_t now_ms = esp_timer_get_time() / 1000;
+
+    if (now_ms - last_scan_time < DEBOUNCE_MS) {
+        ESP_LOGW(TAG, "Ignoring duplicate scan (debounce)");
+        return;
+    }
+    last_scan_time = now_ms;
+
+    char event_id[37];
+    char timestamp[30];
+    generate_uuid(event_id);
+    get_rfc3339_timestamp(timestamp, sizeof(timestamp));
+
+    char json_string[256];
+    snprintf(json_string, sizeof(json_string),
+        "{\"event_id\":\"%s\",\"device_id\":\"%s\",\"rfid_uid\":\"%s\",\"ts\":\"%s\"}",
+        event_id, DEVICE_ID, rfid_uid, timestamp);
+    ESP_LOGI(TAG, "Sending event: %s", json_string);
+
+    esp_http_client_config_t config = {
+        .url = GATEWAY_URL "/api/events",
+        .event_handler = http_event_handler,
+        .method = HTTP_METHOD_POST,
+    };
+    esp_http_client_handle_t client = esp_http_client_init(&config);
+
+    esp_http_client_set_header(client, "Content-Type", "application/json");
+    esp_http_client_set_header(client, "X-Device-Token", DEVICE_TOKEN);
+
+    esp_http_client_set_post_field(client, json_string, strlen(json_string));
+
+    esp_err_t err = esp_http_client_perform(client);
+    int status_code = esp_http_client_get_status_code(client);
+
+    if (err == ESP_OK && (status_code == 201 || status_code == 202)) {
+        ESP_LOGI(TAG, "Event sent successfully (status: %d)", status_code);
+    } else {
+        ESP_LOGE(TAG, "Failed to send event: %s, status: %d", esp_err_to_name(err), status_code);
+    }
+
+    esp_http_client_cleanup(client);
+}
+

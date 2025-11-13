@@ -1,0 +1,166 @@
+/* Extracted from esp32/main/main.c */
+static esp_err_t rc522_request(uint8_t req_mode) {
+    ESP_ERROR_CHECK(rc522_write_reg(RC522_REG_BIT_FRAMING, 0x07));
+    uint8_t back_data[MFRC522_MAX_LEN] = {0};
+    size_t back_bits = 0;
+    esp_err_t err = rc522_transceive(&req_mode, 1, back_data, &back_bits);
+    if (err != ESP_OK || back_bits != 0x10) {
+        return ESP_FAIL;
+    }
+    return ESP_OK;
+}
+
+static esp_err_t rc522_anticoll(uint8_t *serial, size_t *serial_len) {
+    uint8_t command[] = {PICC_ANTICOLL_CL1, 0x20};
+    uint8_t back_data[MFRC522_MAX_LEN] = {0};
+    size_t back_bits = 0;
+
+    ESP_ERROR_CHECK(rc522_write_reg(RC522_REG_BIT_FRAMING, 0x00));
+
+    esp_err_t err = rc522_transceive(command, sizeof(command), back_data, &back_bits);
+    if (err != ESP_OK) {
+        return err;
+    }
+
+    if (back_bits != 0x28) {
+        return ESP_FAIL;
+    }
+
+    uint8_t check = 0;
+    for (int i = 0; i < 4; i++) {
+        serial[i] = back_data[i];
+        check ^= back_data[i];
+    }
+
+    if (check != back_data[4]) {
+        return ESP_FAIL;
+    }
+
+    serial[4] = back_data[4];
+    if (serial_len) {
+        *serial_len = 5;
+    }
+    return ESP_OK;
+}
+
+static bool rc522_get_tag(uint8_t *uid, size_t *uid_len) {
+    static uint32_t request_failures = 0;
+    static uint32_t anticoll_failures = 0;
+
+    if (!rc522_initialized) {
+        return false;
+    }
+
+    esp_err_t req_err = rc522_request(PICC_REQIDL);
+    if (req_err != ESP_OK) {
+        request_failures++;
+        if (request_failures % 20 == 1) {
+            ESP_LOGW(TAG, "RFID request failed (%s). Check wiring/power. Failure count=%" PRIu32,
+                     esp_err_to_name(req_err), request_failures);
+        }
+        return false;
+    }
+
+    size_t serial_length = 0;
+    esp_err_t anticoll_err = rc522_anticoll(uid, &serial_length);
+    if (anticoll_err != ESP_OK) {
+        anticoll_failures++;
+        if (anticoll_failures % 20 == 1) {
+            ESP_LOGW(TAG, "RFID anticollision failed (%s). Failure count=%" PRIu32,
+                     esp_err_to_name(anticoll_err), anticoll_failures);
+        }
+        return false;
+    }
+
+    rc522_halt();
+
+    if (uid_len) {
+        *uid_len = serial_length;
+    }
+    return true;
+}
+
+static esp_err_t rc522_reset_sequence(void) {
+    gpio_config_t rst_conf = {
+        .pin_bit_mask = 1ULL << RC522_RST_PIN,
+        .mode = GPIO_MODE_OUTPUT,
+        .pull_down_en = 0,
+        .pull_up_en = 0,
+        .intr_type = GPIO_INTR_DISABLE,
+    };
+    ESP_ERROR_CHECK(gpio_config(&rst_conf));
+
+    gpio_set_level(RC522_RST_PIN, 0);
+    vTaskDelay(pdMS_TO_TICKS(10));
+    gpio_set_level(RC522_RST_PIN, 1);
+    vTaskDelay(pdMS_TO_TICKS(10));
+
+    ESP_ERROR_CHECK(rc522_write_reg(RC522_REG_COMMAND, RC522_CMD_SOFT_RESET));
+    vTaskDelay(pdMS_TO_TICKS(50));
+    return ESP_OK;
+}
+
+static esp_err_t rc522_configure(void) {
+    ESP_ERROR_CHECK(rc522_write_reg(RC522_REG_T_MODE, 0x8D));
+    ESP_ERROR_CHECK(rc522_write_reg(RC522_REG_T_PRESCALER, 0x3E));
+    ESP_ERROR_CHECK(rc522_write_reg(RC522_REG_T_RELOAD_L, 30));
+    ESP_ERROR_CHECK(rc522_write_reg(RC522_REG_T_RELOAD_H, 0));
+    ESP_ERROR_CHECK(rc522_write_reg(RC522_REG_TX_ASK, 0x40));
+    ESP_ERROR_CHECK(rc522_write_reg(RC522_REG_MODE, 0x3D));
+    return rc522_antenna_on();
+}
+
+static esp_err_t rc522_init(void) {
+    if (rc522_initialized) {
+        return ESP_OK;
+    }
+
+    spi_bus_config_t buscfg = {
+        .mosi_io_num = RC522_MOSI_PIN,
+        .miso_io_num = RC522_MISO_PIN,
+        .sclk_io_num = RC522_SCK_PIN,
+        .quadwp_io_num = -1,
+        .quadhd_io_num = -1,
+        .max_transfer_sz = 0,
+        .flags = 0,
+    };
+
+    esp_err_t ret = spi_bus_initialize(RC522_SPI_HOST, &buscfg, SPI_DMA_CH_AUTO);
+    if (ret != ESP_OK && ret != ESP_ERR_INVALID_STATE) {
+        return ret;
+    }
+
+    spi_device_interface_config_t devcfg = {
+        .clock_speed_hz = 5 * 1000 * 1000,
+        .mode = 0,
+        .spics_io_num = RC522_SDA_PIN,
+        .queue_size = 1,
+        .flags = 0,
+    };
+
+    ret = spi_bus_add_device(RC522_SPI_HOST, &devcfg, &rc522_spi);
+    if (ret != ESP_OK) {
+        return ret;
+    }
+
+    ESP_ERROR_CHECK(rc522_reset_sequence());
+    ESP_ERROR_CHECK(rc522_configure());
+
+    uint8_t version = 0;
+    esp_err_t version_err = rc522_read_reg(RC522_REG_VERSION, &version);
+    if (version_err != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to read MFRC522 version register: %s", esp_err_to_name(version_err));
+        return version_err;
+    }
+
+    ESP_LOGI(TAG, "MFRC522 version register: 0x%02X", version);
+    if (version == 0x00 || version == 0xFF) {
+        ESP_LOGE(TAG, "Invalid MFRC522 version response. Expected 0x90/0x91/0x92. Check SPI wiring (SCK/MOSI/MISO/SDA) and power.");
+        return ESP_FAIL;
+    }
+
+    rc522_initialized = true;
+    ESP_LOGI(TAG, "MFRC522 ready (direct SPI mode)");
+    return ESP_OK;
+}
+
