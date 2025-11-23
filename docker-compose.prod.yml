@@ -28,11 +28,13 @@ services:
       dockerfile: Dockerfile
     container_name: attendance-gateway
     environment:
-      PG_URL: ${PG_URL:-postgres://attendance_user:${POSTGRES_PASSWORD}@postgres:5432/attendance?sslmode=disable}
+      PG_URL: ${PG_URL:-postgresql://${POSTGRES_USER:-attendance_user}:${POSTGRES_PASSWORD}@postgres:5432/attendance?sslmode=disable}
       DEVICE_TOKEN_SECRET: ${DEVICE_TOKEN_SECRET}
       BUFFER_DB_PATH: /tmp/gateway-buffer.db
       PORT: ${GATEWAY_PORT:-8080}
       PROMETHEUS_ENABLED: ${PROMETHEUS_ENABLED:-false}
+    ports:
+      - "${GATEWAY_PORT:-8080}:${GATEWAY_PORT:-8080}"
     volumes:
       - gateway_buffer:/tmp
     depends_on:
@@ -48,9 +50,11 @@ services:
       dockerfile: Dockerfile
     container_name: attendance-admin
     environment:
-      PG_URL: ${PG_URL:-postgres://attendance_user:${POSTGRES_PASSWORD}@postgres:5432/attendance?sslmode=disable}
+      PG_URL: ${PG_URL:-postgresql://${POSTGRES_USER:-attendance_user}:${POSTGRES_PASSWORD}@postgres:5432/attendance?sslmode=disable}
       PORT: ${ADMIN_PORT:-8000}
-      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000}
+      CORS_ORIGINS: ${CORS_ORIGINS:-https://lib.alokranjan.me}
+    ports:
+      - "${ADMIN_PORT:-8000}:${ADMIN_PORT:-8000}"
     depends_on:
       postgres:
         condition: service_healthy

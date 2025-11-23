@@ -63,15 +63,34 @@ export async function createStudent(student: {
   return res.json();
 }
 
-export async function registerRFID(admission_no: string, rfid_uid: string): Promise<{ status: string; admission_no: string; rfid_uid: string }> {
+export async function registerRFID(
+  admission_no: string,
+  rfid_uid: string,
+  options?: { force?: boolean }
+): Promise<{ status: string; admission_no: string; rfid_uid: string }> {
   const res = await fetch(`${API_URL}/students/register-rfid`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ admission_no, rfid_uid: rfid_uid.toUpperCase().trim() }),
+    body: JSON.stringify({
+      admission_no,
+      rfid_uid: rfid_uid.toUpperCase().trim(),
+      force: options?.force ?? false,
+    }),
   });
   if (!res.ok) {
     const error = await res.json().catch(() => ({ detail: 'Failed to register RFID' }));
     throw new Error(error.detail || 'Failed to register RFID');
+  }
+  return res.json();
+}
+
+export async function removeRFID(admission_no: string): Promise<{ status: string; admission_no: string }> {
+  const res = await fetch(`${API_URL}/students/${encodeURIComponent(admission_no)}/rfid`, {
+    method: 'DELETE',
+  });
+  if (!res.ok) {
+    const error = await res.json().catch(() => ({ detail: 'Failed to remove RFID' }));
+    throw new Error(error.detail || 'Failed to remove RFID');
   }
   return res.json();
 }
@@ -85,8 +104,10 @@ export async function fetchAttendance(params?: {
   if (params?.date) searchParams.set('date', params.date);
   if (params?.admission_no) searchParams.set('admission_no', params.admission_no);
   if (params?.limit) searchParams.set('limit', params.limit.toString());
-  
-  const res = await fetch(`${API_URL}/attendance?${searchParams}`);
+
+  const query = searchParams.toString();
+  const url = query ? `${API_URL}/attendance?${query}` : `${API_URL}/attendance`;
+  const res = await fetch(url);
   if (!res.ok) throw new Error('Failed to fetch attendance');
   return res.json();
 }
@@ -123,6 +144,20 @@ export interface UnassignedRFID {
 export async function fetchUnassignedRFIDs(): Promise<UnassignedRFID[]> {
   const res = await fetch(`${API_URL}/rfid/unassigned`);
   if (!res.ok) throw new Error("Failed to fetch unassigned RFID tags");
+  return res.json();
+}
+
+export interface CurrentAttendance {
+  admission_no: string;
+  name: string;
+  branch?: string;
+  year?: number;
+  last_seen: string;
+}
+
+export async function fetchCurrentAttendance(): Promise<CurrentAttendance[]> {
+  const res = await fetch(`${API_URL}/attendance/current`);
+  if (!res.ok) throw new Error('Failed to fetch current attendance');
   return res.json();
 }
 

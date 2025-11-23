@@ -29,7 +29,7 @@ static const int64_t DEBOUNCE_MS = 2000;
 static spi_device_handle_t rc522_spi = NULL;
 static bool rc522_initialized = false;
 
-// MFRC522 register map (subset required for basic operations)
+// MFRC522 register map 
 #define RC522_REG_COMMAND          0x01
 #define RC522_REG_COMM_IE          0x02
 #define RC522_REG_COMM_IRQ         0x04
@@ -52,7 +52,7 @@ static bool rc522_initialized = false;
 #define RC522_REG_T_RELOAD_H       0x2C
 #define RC522_REG_VERSION          0x37
 
-// MFRC522 command set (subset)
+// MFRC522 command set 
 #define RC522_CMD_IDLE             0x00
 #define RC522_CMD_CALC_CRC         0x03
 #define RC522_CMD_TRANSCEIVE       0x0C
@@ -219,7 +219,7 @@ static void init_oled_display(void) {
 
 // WiFi event handler
 static void wifi_event_handler(void* arg, esp_event_base_t event_base,
-                              int32_t event_id, void* event_data) {
+                            int32_t event_id, void* event_data) {
     if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
         esp_wifi_connect();
         ESP_LOGI(TAG, "WiFi connecting to: %s", WIFI_SSID);
@@ -699,12 +699,11 @@ static void rfid_reader_task(void *pvParameters) {
                 snprintf(&uid_hex[i * 2], sizeof(uid_hex) - (i * 2), "%02X", uid[i]);
             }
 
-            ESP_LOGI(TAG, "═══════════════════════════════════");
+            ESP_LOGI(TAG, "@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#");
             ESP_LOGI(TAG, "RFID CARD DETECTED!");
             ESP_LOGI(TAG, "UID: %s", uid_hex);
-            ESP_LOGI(TAG, "Sending to Gateway...");
-            ESP_LOGI(TAG, "═══════════════════════════════════");
-
+            ESP_LOGI(TAG, "Passing to gateway"...");
+            ESP_LOGI(TAG, "@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#");
             rfid_cache_entry_t *cache_entry = rfid_cache_get(uid_hex);
             if (cache_entry->name[0] == '\0') {
                 if (fetch_student_info(uid_hex, cache_entry) != ESP_OK) {
@@ -726,7 +725,7 @@ static void rfid_reader_task(void *pvParameters) {
 }
 
 void app_main(void) {
-    ESP_LOGI(TAG, "Attendance System starting...");
+    ESP_LOGI(TAG, "Attendance Sys starting...");
 
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
@@ -743,11 +742,11 @@ void app_main(void) {
 
     esp_err_t rfid_err = rc522_init();
     if (rfid_err != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to initialize MFRC522: %s", esp_err_to_name(rfid_err));
+        ESP_LOGE(TAG, "UHOH, Failed to init MFRC522: %s", esp_err_to_name(rfid_err));
     }
 
     xTaskCreate(rfid_reader_task, "rfid_task", 4096, NULL, 5, NULL);
 
-    ESP_LOGI(TAG, "System ready");
+    ESP_LOGI(TAG, "System UP");
 }
 

@@ -1,8 +1,8 @@
 "use client"
 
 import { useState, useMemo, useEffect } from "react"
-import { Search, Filter, MoreHorizontal, CreditCard } from "lucide-react"
-import { fetchStudents, registerRFID, type Student } from "@/lib/api"
+import { Search, Filter, CreditCard, Trash2 } from "lucide-react"
+import { fetchStudents, registerRFID, removeRFID, type Student } from "@/lib/api"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -18,6 +18,8 @@ export default function StudentRecords() {
   const [rfidUid, setRfidUid] = useState("")
   const [registering, setRegistering] = useState(false)
   const [registerError, setRegisterError] = useState<string | null>(null)
+  const [overrideAdmission, setOverrideAdmission] = useState<string | null>(null)
+  const [removingId, setRemovingId] = useState<string | null>(null)
 
   useEffect(() => {
     loadStudents()
@@ -39,10 +41,11 @@ export default function StudentRecords() {
     setSelectedStudent(student)
     setRfidUid("")
     setRegisterError(null)
+    setOverrideAdmission(null)
     setRegisterDialogOpen(true)
   }
 
-  const handleSubmitRFID = async () => {
+  const submitRFID = async (force = false) => {
     if (!selectedStudent || !rfidUid.trim()) {
       setRegisterError("Please enter RFID UID")
       return
@@ -50,17 +53,50 @@ export default function StudentRecords() {
 
     setRegistering(true)
     setRegisterError(null)
+    setOverrideAdmission(null)
 
     try {
-      await registerRFID(selectedStudent.admission_no, rfidUid.trim())
+      await registerRFID(selectedStudent.admission_no, rfidUid.trim(), { force })
       await loadStudents() // Refresh to show updated RFID
       setRegisterDialogOpen(false)
       setRfidUid("")
       setSelectedStudent(null)
+      setOverrideAdmission(null)
     } catch (error: any) {
-      setRegisterError(error.message || "Failed to register RFID")
+      const message = error?.message || "Failed to register RFID"
+      const existingMatch = message.match(/RFID already registered to (.+)/i)
+      if (existingMatch && !force) {
+        const existingAdmission = existingMatch[1].trim()
+        setOverrideAdmission(existingAdmission)
+        setRegisterError(`This card is currently linked to ${existingAdmission}.`)
+      } else {
+        setRegisterError(message)
+      }
     } finally {
       setRegistering(false)
+    }
+  }
+
+  const handleSubmitRFID = () => submitRFID(false)
+
+  const handleOverrideRFID = () => submitRFID(true)
+
+  const handleRemoveRFID = async (student: Student) => {
+    if (!student.rfid_uid) return
+    const confirmed = window.confirm(
+      `Remove RFID card ${student.rfid_uid} from ${student.name}?`
+    )
+    if (!confirmed) return
+
+    try {
+      setRemovingId(student.admission_no)
+      await removeRFID(student.admission_no)
+      await loadStudents()
+    } catch (error) {
+      console.error("Failed to remove RFID:", error)
+      alert(error instanceof Error ? error.message : "Failed to remove RFID")
+    } finally {
+      setRemovingId(null)
     }
   }
 
@@ -175,7 +211,9 @@ export default function StudentRecords() {
                     <td className="font-medium">{student.name}</td>
                     <td>{student.branch || "-"}</td>
                     <td>{student.year || "-"}</td>
-                    <td className="font-mono text-sm text-foreground">{student.rfid_uid || <span className="text-muted-foreground">Not linked</span>}</td>
+                    <td className="font-mono text-sm text-foreground">
+                      {student.rfid_uid || <span className="text-muted-foreground">Not linked</span>}
+                    </td>
                     <td className="text-center">
                       <button
                         onClick={() => handleRegisterRFID(student)}
@@ -184,6 +222,16 @@ export default function StudentRecords() {
                       >
                         <CreditCard className="w-4 h-4 text-muted-foreground hover:text-accent" />
                       </button>
+                      {student.rfid_uid && (
+                        <button
+                          onClick={() => handleRemoveRFID(student)}
+                          className="inline-flex items-center justify-center w-8 h-8 rounded hover:bg-card transition-colors ml-1 disabled:opacity-50"
+                          title="Remove RFID Card"
+                          disabled={removingId === student.admission_no}
+                        >
+                          <Trash2 className="w-4 h-4 text-muted-foreground hover:text-red-400" />
+                        </button>
+                      )}
                     </td>
                   </tr>
                 ))
@@ -223,6 +271,16 @@ export default function StudentRecords() {
             {registerError && (
               <div className="p-3 bg-red-500/20 border border-red-500/50 rounded text-sm text-red-400">
                 {registerError}
+              </div>
+            )}
+            {overrideAdmission && (
+              <div className="flex items-center justify-between gap-3 p-3 bg-yellow-500/20 border border-yellow-500/40 rounded">
+                <span className="text-sm text-yellow-200">
+                  Override will unlink the card from {overrideAdmission} and assign it to this student.
+                </span>
+                <Button variant="secondary" onClick={handleOverrideRFID} disabled={registering}>
+                  {registering ? "Overriding..." : "Override"}
+                </Button>
               </div>
             )}
             <div className="flex gap-2 justify-end">

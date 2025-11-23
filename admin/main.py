@@ -257,6 +257,7 @@ async def register_rfid(data: dict):
     """Register an RFID UID to a student"""
     admission_no = data.get("admission_no")
     rfid_uid = data.get("rfid_uid", "").upper().strip()  # Normalize to uppercase
+    force = bool(data.get("force"))
     
     if not admission_no or not rfid_uid:
         raise HTTPException(status_code=400, detail="admission_no and rfid_uid required")
@@ -270,7 +271,12 @@ async def register_rfid(data: dict):
                 rfid_uid, admission_no
             )
             if existing:
-                raise HTTPException(status_code=400, detail=f"RFID already registered to {existing['admission_no']}")
+                if not force:
+                    raise HTTPException(status_code=400, detail=f"RFID already registered to {existing['admission_no']}")
+                await conn.execute(
+                    "UPDATE students SET rfid_uid = NULL WHERE admission_no = $1",
+                    existing["admission_no"]
+                )
             
             # Update student with RFID UID
             await conn.execute(
@@ -295,8 +301,10 @@ async def register_rfid(data: dict):
             )
             existing = cur.fetchone()
             if existing:
-                conn.rollback()
-                raise HTTPException(status_code=400, detail=f"RFID already registered to {existing[0]}")
+                if not force:
+                    conn.rollback()
+                    raise HTTPException(status_code=400, detail=f"RFID already registered to {existing[0]}")
+                cur.execute("UPDATE students SET rfid_uid = NULL WHERE admission_no = %s", (existing[0],))
             
             # Update student with RFID UID
             cur.execute(
@@ -314,6 +322,40 @@ async def register_rfid(data: dict):
         except Exception as e:
             conn.rollback()
             raise HTTPException(status_code=400, detail=str(e))
+        finally:
+            cur.close()
+
+@app.delete("/students/{admission_no}/rfid")
+async def remove_rfid(admission_no: str):
+    admission_no = admission_no.strip()
+    if not admission_no:
+        raise HTTPException(status_code=400, detail="admission_no required")
+
+    if USE_ASYNC:
+        conn = await db_pool.acquire()
+        try:
+            result = await conn.execute(
+                "UPDATE students SET rfid_uid = NULL WHERE admission_no = $1",
+                admission_no
+            )
+            if result == "UPDATE 0":
+                raise HTTPException(status_code=404, detail="Student not found")
+            return {"status": "cleared", "admission_no": admission_no}
+        finally:
+            await db_pool.release(conn)
+    else:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        try:
+            cur.execute(
+                "UPDATE students SET rfid_uid = NULL WHERE admission_no = %s",
+                (admission_no,)
+            )
+            if cur.rowcount == 0:
+                conn.rollback()
+                raise HTTPException(status_code=404, detail="Student not found")
+            conn.commit()
+            return {"status": "cleared", "admission_no": admission_no}
         finally:
             cur.close()
 
@@ -402,6 +444,35 @@ async def get_attendance(date: Optional[str] = None, admission_no: Optional[str]
                     row_dict['device_id'] = None
                 results.append(row_dict)
             return results
+        finally:
+            cur.close()
+
+@app.get("/attendance/current")
+async def get_current_attendance():
+    query = """
+        SELECT s.admission_no,
+               s.name,
+               s.branch,
+               s.year,
+               st.last_ts AS last_seen
+        FROM attendance_state st
+        JOIN students s ON s.admission_no = st.admission_no
+        WHERE st.last_event_type = 'entry'
+        ORDER BY st.last_ts DESC
+    """
+    if USE_ASYNC:
+        conn = await db_pool.acquire()
+        try:
+            rows = await conn.fetch(query)
+            return [dict(row) for row in rows]
+        finally:
+            await db_pool.release(conn)
+    else:
+        conn = get_db_connection()
+        cur = conn.cursor(cursor_factory=RealDictCursor)
+        try:
+            cur.execute(query)
+            return [dict(row) for row in cur.fetchall()]
         finally:
             cur.close()
 

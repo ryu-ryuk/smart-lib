@@ -1,16 +1,19 @@
 "use client"
 
 import { useEffect, useMemo, useState } from "react"
-import { Users, Clock, AlertTriangle } from "lucide-react"
+import { Users, Clock, AlertTriangle, UserCheck } from "lucide-react"
 import {
   fetchAttendance,
   fetchStudents,
   fetchUnassignedRFIDs,
+  fetchCurrentAttendance,
   registerRFID,
   AttendanceWebSocket,
   type AttendanceRecord,
   type Student,
   type UnassignedRFID,
+  type CurrentAttendance,
+  type AttendanceEvent,
 } from "@/lib/api"
 let wsClient: AttendanceWebSocket | null = null
 
@@ -21,6 +24,7 @@ export default function Dashboard() {
   const [stats, setStats] = useState({
     totalStudents: 0,
     todayCheckIns: 0,
+    currentlyPresent: 0,
   })
   const [loading, setLoading] = useState(true)
   const [unassignedLoading, setUnassignedLoading] = useState(false)
@@ -28,6 +32,10 @@ export default function Dashboard() {
   const [assignErrors, setAssignErrors] = useState<Record<string, string>>({})
   const [assignStatus, setAssignStatus] = useState<Record<string, string>>({})
   const [assigningUid, setAssigningUid] = useState<string | null>(null)
+  const [currentAttendance, setCurrentAttendance] = useState<CurrentAttendance[]>([])
+  const [viewMode, setViewMode] = useState<"recent" | "present">("recent")
+  const [currentBranchFilter, setCurrentBranchFilter] = useState("all")
+  const [lastEvent, setLastEvent] = useState<AttendanceEvent | null>(null)
 
   const handlePageChange = (page: string) => {
     if (typeof window !== "undefined") {
@@ -43,9 +51,11 @@ export default function Dashboard() {
       wsClient = new AttendanceWebSocket()
       wsClient.connect()
 
-      const unsubscribe = wsClient.onEvent(() => {
+      const unsubscribe = wsClient.onEvent((event) => {
+        setLastEvent(event)
         loadAttendance(true)
         loadUnassigned()
+        loadCurrent()
       })
 
       return () => {
@@ -104,18 +114,21 @@ export default function Dashboard() {
   const loadData = async () => {
     try {
       setLoading(true)
-      const [attendanceData, studentsData, unassignedData] = await Promise.all([
+      const [attendanceData, studentsData, unassignedData, currentData] = await Promise.all([
         fetchAttendance({ limit: 8 }),
         fetchStudents(),
         fetchUnassignedRFIDs(),
+        fetchCurrentAttendance(),
       ])
       setAttendance(attendanceData)
       loadStudents(studentsData)
       setStats({
         totalStudents: studentsData.length,
         todayCheckIns: calculateTodayCheckIns(attendanceData),
+        currentlyPresent: currentData.length,
       })
       loadUnassigned(unassignedData)
+      setCurrentAttendance(currentData)
     } catch (error) {
       console.error("Failed to load data:", error)
     } finally {
@@ -143,6 +156,19 @@ export default function Dashboard() {
     }
   }
 
+  const loadCurrent = async () => {
+    try {
+      const data = await fetchCurrentAttendance()
+      setCurrentAttendance(data)
+      setStats((prev) => ({
+        ...prev,
+        currentlyPresent: data.length,
+      }))
+    } catch (error) {
+      console.error("Failed to load current attendance:", error)
+    }
+  }
+
   const formatTime = (timestamp: string) => {
     const date = new Date(timestamp)
     return date.toLocaleTimeString("en-US", {
@@ -152,7 +178,8 @@ export default function Dashboard() {
     })
   }
 
-  const formatRelativeTime = (timestamp: string) => {
+  const formatRelativeTime = (timestamp?: string) => {
+    if (!timestamp) return "—"
     const date = new Date(timestamp)
     const diff = Date.now() - date.getTime()
     const seconds = Math.max(0, Math.floor(diff / 1000))
@@ -166,9 +193,10 @@ export default function Dashboard() {
   }
 
   const statCards = [
-    { label: "Total Students", value: stats.totalStudents.toString(), Icon: Users, color: "from-blue-500 to-blue-600" },
+    { label: "Currently Checked-in", value: stats.currentlyPresent.toString(), Icon: UserCheck, color: "from-green-500 to-green-600" },
     { label: "Today's Check-ins", value: stats.todayCheckIns.toString(), Icon: Clock, color: "from-orange-500 to-orange-600" },
     { label: "Unassigned RFID Tags", value: unassignedRFIDs.length.toString(), Icon: AlertTriangle, color: "from-purple-500 to-purple-600" },
+    { label: "Total Students", value: stats.totalStudents.toString(), Icon: Users, color: "from-blue-500 to-blue-600" },
   ]
 
   const allStudentsDatalist = useMemo(() => {
@@ -177,6 +205,25 @@ export default function Dashboard() {
       label: `${student.admission_no} — ${student.name}`,
     }))
   }, [students])
+
+  const branchOptions = useMemo(() => {
+    const branches = new Set<string>()
+    students.forEach((student) => {
+      if (student.branch) {
+        branches.add(student.branch)
+      }
+    })
+    return ["all", ...Array.from(branches).sort()]
+  }, [students])
+
+  const filteredCurrentAttendance = useMemo(() => {
+    return currentAttendance.filter((record) => {
+      if (currentBranchFilter !== "all" && record.branch !== currentBranchFilter) {
+        return false
+      }
+      return true
+    })
+  }, [currentAttendance, currentBranchFilter])
 
   const handleAssign = async (rfid_uid: string) => {
     const admissionNo = (assignInputs[rfid_uid] || "").trim()
@@ -192,11 +239,38 @@ export default function Dashboard() {
       setAssignInputs((prev) => ({ ...prev, [rfid_uid]: "" }))
       await Promise.all([loadUnassigned(), loadStudents(), loadAttendance()])
     } catch (error) {
+      const message = error instanceof Error ? error.message : "Failed to link RFID card."
+      const existingMatch = message.match(/RFID already registered to (.+)/i)
+      if (existingMatch) {
+        const existingAdmission = existingMatch[1].trim()
+        const confirmOverride = window.confirm(
+          `Card ${rfid_uid} is currently linked to ${existingAdmission}. Override and reassign to ${admissionNo}?`
+        )
+        if (confirmOverride) {
+          try {
+            await registerRFID(admissionNo, rfid_uid, { force: true })
+            setAssignStatus((prev) => ({ ...prev, [rfid_uid]: `Reassigned to ${admissionNo}` }))
+            setAssignInputs((prev) => ({ ...prev, [rfid_uid]: "" }))
+            await Promise.all([loadUnassigned(), loadStudents(), loadAttendance(), loadCurrent()])
+            return
+          } catch (overrideError) {
+            const overrideMessage =
+              overrideError instanceof Error ? overrideError.message : "Failed to override RFID assignment."
+            setAssignErrors((prev) => ({ ...prev, [rfid_uid]: overrideMessage }))
+          }
+        } else {
+          setAssignErrors((prev) => ({
+            ...prev,
+            [rfid_uid]: `Left assigned to ${existingAdmission}.`,
+          }))
+        }
+      } else {
+        setAssignErrors((prev) => ({
+          ...prev,
+          [rfid_uid]: message,
+        }))
+      }
       setAssignStatus((prev) => ({ ...prev, [rfid_uid]: "" }))
-      setAssignErrors((prev) => ({
-        ...prev,
-        [rfid_uid]: error instanceof Error ? error.message : "Failed to link RFID card.",
-      }))
     } finally {
       setAssigningUid(null)
     }
@@ -308,7 +382,7 @@ export default function Dashboard() {
         )}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {statCards.map((stat, idx) => (
           <div key={idx} className="stat-card hover:bg-white/8 transition-colors">
             <div className="flex items-start justify-between">
@@ -324,47 +398,147 @@ export default function Dashboard() {
         ))}
       </div>
 
-      <div className="stat-card">
-        <h3 className="text-lg font-semibold text-foreground mb-4">Recent Attendance Logs</h3>
+      <div className="stat-card space-y-4">
+        <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+          <div>
+            <h3 className="text-lg font-semibold text-foreground">Attendance Activity</h3>
+            <p className="text-sm text-muted-foreground">
+              {lastEvent?.ts
+                ? `Last update ${formatRelativeTime(lastEvent.ts)}`
+                : "Listening for live updates…"}
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setViewMode("recent")}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                viewMode === "recent" ? "bg-accent text-accent-foreground" : "glass-effect-sm"
+              }`}
+            >
+              Recent activity
+            </button>
+            <button
+              onClick={() => setViewMode("present")}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                viewMode === "present" ? "bg-accent text-accent-foreground" : "glass-effect-sm"
+              }`}
+            >
+              Currently inside
+            </button>
+          </div>
+        </div>
+
+        {viewMode === "present" && (
+          <div className="flex flex-wrap items-center gap-3">
+            {branchOptions.length > 1 && (
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-muted-foreground">Filter by branch:</span>
+                <select
+                  value={currentBranchFilter}
+                  onChange={(e) => setCurrentBranchFilter(e.target.value)}
+                  className="px-3 py-2 text-sm bg-card border border-border rounded-lg"
+                >
+                  <option value="all">All branches</option>
+                  {branchOptions.slice(1).map((branch) => (
+                    <option key={branch} value={branch}>
+                      {branch}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
+            <span className="text-sm text-muted-foreground">
+              Showing {filteredCurrentAttendance.length} of {currentAttendance.length} students inside
+            </span>
+          </div>
+        )}
+
         <div className="overflow-x-auto">
-          <table className="data-table">
-            <thead>
-              <tr>
-                <th>Student ID</th>
-                <th>Name</th>
-                <th>Check-in Time</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {attendance.length === 0 ? (
+          {viewMode === "recent" ? (
+            <table className="data-table">
+              <thead>
                 <tr>
-                  <td colSpan={4} className="text-center text-muted-foreground py-8">
-                    No attendance records yet
-                  </td>
+                  <th>Student ID</th>
+                  <th>Name</th>
+                  <th>Time</th>
+                  <th>Status</th>
                 </tr>
-              ) : (
-                attendance.map((record) => (
-                  <tr key={record.id}>
-                    <td className="font-mono text-sm text-foreground">{record.admission_no}</td>
-                    <td className="text-foreground">{record.name || "Unknown"}</td>
-                    <td className="text-foreground">{formatTime(record.ts)}</td>
-                    <td>
-                      <span
-                        className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
-                          record.event_type === "entry"
-                            ? "bg-green-500/20 text-green-400"
-                            : "bg-orange-500/20 text-orange-400"
-                        }`}
-                      >
-                        {record.event_type === "entry" ? "Checked In" : "Checked Out"}
-                      </span>
+              </thead>
+              <tbody>
+                {attendance.length === 0 ? (
+                  <tr>
+                    <td colSpan={4} className="text-center text-muted-foreground py-8">
+                      No attendance records yet
                     </td>
                   </tr>
-                ))
-              )}
-            </tbody>
-          </table>
+                ) : (
+                  attendance.map((record) => (
+                    <tr key={record.id}>
+                      <td className="font-mono text-sm text-foreground">{record.admission_no}</td>
+                      <td className="text-foreground">{record.name || "Unknown"}</td>
+                      <td className="text-foreground">
+                        <div className="flex flex-col">
+                          <span>{formatTime(record.ts)}</span>
+                          <span className="text-xs text-muted-foreground">{formatRelativeTime(record.ts)}</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span
+                          className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
+                            record.event_type === "entry"
+                              ? "bg-green-500/20 text-green-400"
+                              : "bg-orange-500/20 text-orange-400"
+                          }`}
+                        >
+                          {record.event_type === "entry" ? "Checked In" : "Checked Out"}
+                        </span>
+                      </td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          ) : (
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th>Student ID</th>
+                  <th>Name</th>
+                  <th>Branch</th>
+                  <th>Year</th>
+                  <th>Last Seen</th>
+                  <th>Duration Inside</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredCurrentAttendance.length === 0 ? (
+                  <tr>
+                    <td colSpan={6} className="text-center text-muted-foreground py-8">
+                      No students currently inside
+                    </td>
+                  </tr>
+                ) : (
+                  filteredCurrentAttendance.map((record) => (
+                    <tr key={record.admission_no}>
+                      <td className="font-mono text-sm text-foreground">{record.admission_no}</td>
+                      <td className="text-foreground">{record.name}</td>
+                      <td className="text-foreground">{record.branch || "-"}</td>
+                      <td className="text-foreground">{record.year ?? "-"}</td>
+                      <td className="text-foreground">
+                        <div className="flex flex-col">
+                          <span>{new Date(record.last_seen).toLocaleTimeString()}</span>
+                          <span className="text-xs text-muted-foreground">
+                            {new Date(record.last_seen).toLocaleDateString()}
+                          </span>
+                        </div>
+                      </td>
+                      <td className="text-foreground">{formatRelativeTime(record.last_seen)}</td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          )}
         </div>
       </div>
     </div>
